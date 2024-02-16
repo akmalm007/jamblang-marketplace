@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --green: #57605a;
+  --green-opa: rgba(87, 96, 90, 0.5);
+  --black: 0b0c0d;
+  --white: #eeeced;
+
+  --tran: all 0.5s ease;
+  --tran02: all 0.2 ease;
+}
+
+body {
+  background-color: #eeeced;
+}
+
+.text a {
+  text-decoration: none;
+  color: #333;
+  list-style: none;
+}
+
+.desktop-nav {
+  display: flex;
+  width: 100vw;
+  background-color: var(--green-opa);
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-container {
+  width: 25%;
+  display: flex;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid var(--green);
+
+  & .search-box {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--white);
+    font-size: large;
+    padding: 0 10px;
+  }
+  & .search-button {
+    width: 4rem;
+    border: none;
+    outline: none;
+    background-color: var(--white);
+    font-size: x-large;
+  }
+}
+
+.container-nav {
+  margin-left: 2rem;
+  height: 2rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+  & a {
+    margin: 0 1rem;
+    font-size: x-large;
+    font-size: medium;
+    color: var(--white);
+    opacity: 0.8;
+    transition: var(--tran02);
+
+    &:hover {
+      transition: var(--tran02);
+      opacity: 1;
+    }
+  }
+}
+
+.notif-container {
+  display: flex;
+  margin-right: 2rem;
+  gap: 1rem;
+}
+
+.notif-container .icon {
+  text-decoration: none;
+  font-size: x-large;
+  color: var(--white);
+
+  &:hover {
+    color: var(--green);
+    transition: var(--tran);
+  }
+}
+
+.landing-page {
+  background: url("../image/landingbg.jpg");
+  width: 100vw;
+  height: 30rem;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.login-container span {
+  padding: 10px;
+  & a {
+    text-decoration: none;
+  }
+}
+
+.login a {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 13px;
+}
+
+.sign-up a {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 13px;
+}
+
+.container-nav-mobile {
+  opacity: 0;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .container-nav-mobile {
+    opacity: 1;
+    background-color: var(--green);
+    position: fixed;
+    bottom: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    z-index: 1;
+
+    & a {
+      color: white;
+      margin: 0 5%;
+    }
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .landing-page {
+    background-size: cover;
+    height: 25vh;
+  }
+}
