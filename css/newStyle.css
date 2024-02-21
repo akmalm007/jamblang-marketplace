@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --green: #57605a;
+  --green-opa: rgba(87, 96, 90, 0.5);
+  --black: 0b0c0d;
+  --white: #eeeced;
+
+  --tran: all 0.5s ease;
+  --tran02: all 0.2 ease;
+}
+
+body {
+  background-color: #eeeced;
+  max-width: 100vw;
+}
+
+.text a {
+  text-decoration: none;
+  color: #333;
+  list-style: none;
+}
+
+.box {
+  border-radius: 10px;
+}
+
+.desktop-nav {
+  visibility: visible;
+  display: flex;
+  background-color: rgb(152, 152, 152);
+  height: fit-content;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+}
+.mobile-nav {
+  visibility: hidden;
+}
+
+.search-box-mobile {
+  visibility: hidden;
+  display: none;
+}
+
+.web-title {
+  padding: 0 1rem;
+  font-size: 36px;
+}
+
+/* landing page section start */
+
+/* main style */
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+}
+
+/* content kiri  */
+.container1 {
+  width: 49%;
+  height: 100%;
+  /* background-color: red; */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-content-main {
+  width: 100%;
+  height: 50%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.box-container {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  margin-top: 10px;
+  gap: 10px;
+}
+.box-content-bottom {
+  width: 50%;
+  border: 2px solid black;
+
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* content kedua */
+.container2 {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 10px;
+
+  border: 2px solid black;
+}
+
+/* landing page section end  */
+
+/* discount page  */
+.discount-main-container {
+  width: 90vw;
+  height: 150vh;
+  margin: 0 auto;
+  background-color: #663399;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin: 20px;
+}
+
+.discount-header-container {
+  background-color: red;
+  margin: px;
+  max-width: 100%;
+  margin: 10px;
+  overflow-x: scroll;
+}
+
+.discount-box-container {
+  display: inline-flex;
+  padding: 10px;
+}
+
+.discount-box {
+  flex: 0 0 auto;
+  width: 43dvw;
+  height: 150px;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.discount-product-section {
+  height: fit-content;
+  max-width: 100vw;
+  white-space: nowrap;
+  background-color: green; /* Warna latar belakang untuk bagian diskon */
+  padding: 20px; /* Padding untuk memberikan ruang di sekitar konten */
+}
+
+.discount-product-list-container {
+  max-width: 100vw;
+  overflow-x: auto;
+  display: flex;
+}
+
+.discount-title {
+  background-color: red;
+  width: 50vw;
+  height: 50vh;
+  margin-right: 20px;
+}
+.discount-product-list {
+  max-width: 80vw;
+  align-items: center;
+  display: inline-flex;
+  border-radius: 10px; /* Memberikan sudut melengkung pada daftar produk */
+  overflow: auto; /* Menghindari border-radius yang terlihat tidak rapi saat di-scroll */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek ketinggian */
+}
+
+.product-card {
+  flex: 0 0 auto;
+  /* width: 15vw; */
+  width: 180px;
+  height: 40vh;
+  margin-right: 10px;
+  background-color: #fff; /* Warna latar belakang untuk kartu produk */
+  border: 1px solid #ddd; /* Garis tepi kartu produk */
+  border-radius: 8px; /* Memberikan sudut melengkung pada kartu produk */
+  padding: 10px; /* Padding untuk memberikan ruang di sekitar konten dalam kartu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek ketinggian */
+}
+
+/* Gaya untuk judul "Flash sale" */
+h2 {
+  color: #333; /* Warna teks judul */
+  font-size: 24px; /* Ukuran teks judul */
+  margin-bottom: 15px; /* Ruang di bawah judul */
+}
+
+/* discount page end */
+@media only screen and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    max-width: 100vw;
+  }
+  .mobile-nav {
+    visibility: visible;
+    width: 100%;
+    background-color: aquamarine;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .web-title {
+    font-size: x-large;
+  }
+
+  .search-box-mobile {
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: rebeccapurple;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50%; /* Lebar container pencarian */
+  }
+
+  .search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="search"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Icon pencarian */
+  .search-icon {
+    font-size: 24px;
+    color: rebeccapurple;
+    margin: 0 10px;
+  }
+
+  /* Hover effect pada tombol pencarian */
+  .search-button:hover {
+    background-color: #ddd;
+  }
+
+  .desktop-nav {
+    visibility: hidden;
+  }
+  /* nav search section end */
+
+  /* landing page section */
+
+  .landing-page {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+    /* margin mengikuti tinggi searchbox */
+  }
+
+  .container1 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .container2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* discount page  */
+
+  .discount-main-container {
+    width: 100vw;
+  }
+
+  .discount-box {
+    width: 80vw;
+  }
+
+  .discount-product-section {
+    height: fit-content;
+    max-width: 100vw;
+    white-space: nowrap;
+    background-color: green; /* Warna latar belakang untuk bagian diskon */
+  }
+
+  .discount-product-list-container {
+    overflow-x: auto;
+    display: flex;
+  }
+
+  .discount-title {
+    background-color: red;
+    width: 1000px;
+    height: 50vh;
+    margin-right: 0;
+  }
+  .discount-product-list {
+    max-width: fit-content;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 10px; /* Memberikan sudut melengkung pada daftar produk */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek ketinggian */
+  }
+
+  /* discoutn page end */
+}

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -127,9 +128,64 @@ body {
 }
 
 .container-nav-mobile {
-  opacity: 0;
+  /* opacity: 0; */
+  display: none;
+  position: fixed;
 }
-@media only screen and (max-width: 768px) {
+
+/* section category */
+.category {
+  /* background-color: red; */
+  width: auto;
+  height: 100vh;
+  margin-top: 5rem;
+  & h1 {
+    text-align: center;
+    width: 100%;
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: xx-large;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.category-container {
+  width: 90%;
+  /* gap: 2rem; */
+  margin-top: 5rem;
+  /* background-color: blue; */
+  margin: 0 auto;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.category-box-container {
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  height: 60vh;
+  /* background-color: rebeccapurple; */
+}
+
+.category-content {
+  background-color: red;
+  object-fit: cover;
+  height: 75%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.invis-box {
+  /* background-color: black; */
+  width: 100%; /* Fill the entire width */
+  flex: 1; /* Fill the remaining height */
+}
+
+/* penambahan foto pada tiap tiap category */
+
+@media only screen and (max-width: 1024px) {
   /* For mobile phones: */
 
   .desktop-nav {
@@ -137,7 +193,8 @@ body {
   }
 
   .container-nav-mobile {
-    opacity: 1;
+    display: flex;
+    /* opacity: 1; */
     background-color: var(--green);
     position: fixed;
     bottom: 0;
@@ -164,5 +221,29 @@ body {
   .landing-page {
     background-size: cover;
     height: 25vh;
+  }
+
+  /* category section */
+  /* Mengubah flex direction menjadi kolom pada tampilan responsif */
+  .category-container {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  /* Menghilangkan invis-box pada tampilan responsif */
+  .invis-box {
+    display: none;
+  }
+
+  /* Mengatur ulang tinggi category content pada tampilan responsif */
+  .category-box-container {
+    width: 80vw;
+    height: 15%;
+    /* margin-bottom: 2rem; */
+  }
+
+  .category-content {
+    width: 100%;
+    height: 100%;
   }
 }
