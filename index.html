@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Plantopia Shop</title>
+    <link rel="stylesheet" href="css/newStyle.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -12,111 +12,129 @@
   </head>
   <body>
     <nav class="desktop-nav">
-      <div class="login-container">
-        <span class="login"><a href="">Masuk</a></span>
-        <span class="sign-up"> <a href="">Daftar</a> </span>
-      </div>
-      <div class="notif-container">
-        <a href=""><i class="bx bxs-bell icon"></i></a>
-        <a href=""><i class="bx bxs-heart icon"></i></a>
-        <a href=""><i class="bx bxs-inbox icon"></i></a>
+      <h1 class="web-title">Web title</h1>
+
+      <div class="search-box box">
+        <button class="search-button">
+          <i class="bx bx-search-alt-2 search-icon"></i>
+        </button>
+        <input type="search" name="" id="" />
       </div>
 
+      <div class="nav-links">
+        <i class="bx bxs-message-dots"></i>
+        <i class="bx bxs-cart-alt"></i>
+        <i class="bx bxs-heart"></i>
+      </div>
+
+      <div class="user-box">
+        <p>Username</p>
+        <div class="user-profile"></div>
+      </div>
+    </nav>
+
+    <!-- FOR MOBILE NAV AND SEARCH BOX  -->
+    <div class="search-box-mobile">
+      <h1 class="web-title">Plantopia</h1>
       <div class="search-container">
         <button class="search-button">
           <i class="bx bx-search-alt-2 search-icon"></i>
         </button>
-        <input class="search-box" type="search" placeholder="search..." />
+        <input type="search" name="" id="" />
       </div>
-      <div class="container-nav desktop">
-        <ul class="nav-links text">
-          <a href="#category">Kategori</a>
-          <a href="#">Promo</a>
-          <a href="#">Akun</a>
-          <a href="#">Tentang</a>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-nav-mobile">
-      <ul class="nav-links mobile text">
-        <a href="#">Kategori</a>
-        <a href="#">Promo</a>
-        <a href="#">Akun</a>
-        <a href="#">Tentang</a>
-      </ul>
     </div>
 
-    <section class="landing-page"></section>
+    <nav class="mobile-nav">
+      <div class="nav-links-mobile">
+        <i class="bx bxs-home bx-md"></i>
+        <i class="bx bxs-message-dots bx-md"></i>
+        <i class="bx bxs-cart-alt bx-md"></i>
+        <i class="bx bxs-heart bx-md"></i>
+      </div>
+    </nav>
+    <!-- FOR MOBILE NAV AND SEARCH BOX  -->
 
-    <!--section untuk category -->
-    <section class="category">
-      <h1 id="category">Temukan kebutuhan mu disini</h1>
-      <div class="category-container">
-        <!-- box 1 -->
-        <div class="category-box-container">
-          <img
-            class="category-content"
-            src="image/category-pupuk.jpg"
-            id="pupuk"
-            alt="Pupuk Image"
-          />
-          <div class="invis-box"></div>
+    <!-- landing page section -->
+    <section class="landing-page">
+      <div class="container1">
+        <div class="box-content-main"></div>
+        <div class="box-container">
+          <div class="box-content-bottom"></div>
+          <div class="box-content-bottom"></div>
         </div>
-        <!-- box 2 -->
-        <div class="category-box-container">
-          <div class="invis-box"></div>
-          <img
-            class="category-content"
-            src="image/category-bibit.jpg"
-            id="bibit"
-            alt="Bibit Image"
-          />
-        </div>
-        <!-- box 3  -->
-        <div class="category-box-container">
-          <img
-            class="category-content"
-            src="image/category-peralatan.jpg"
-            id="peralatan"
-            alt="Peralatan Image"
-          />
-          <div class="invis-box"></div>
-        </div>
+      </div>
 
-        <!-- box 4 -->
-        <div class="category-box-container">
-          <div class="invis-box"></div>
-          <img
-            class="category-content"
-            src="image/category-jasa.jpg"
-            id="jasa"
-            alt="Jasa Image"
-          />
-        </div>
-        <!-- box 5 -->
-        <div class="category-box-container">
-          <img
-            class="category-content"
-            src="image/category-tanaman-hias.jpg"
-            id="tanaman-hias"
-            alt="Tanaman Hias Image"
-          />
-          <div class="invis-box"></div>
-          /
+      <div class="container2"></div>
+    </section>
+
+    <!-- landing page section end -->
+
+    <!-- discount page  -->
+    <section class="discount-section">
+      <!-- main container -->
+      <div class="discount-main-container">
+        <!-- header -->
+        <h2>Diskon untukmu</h2>
+        <div class="discount-header-container">
+          <div class="discount-box-container">
+            <div class="discount-box" id="box1"></div>
+            <div class="discount-box" id="box2"></div>
+            <div class="discount-box" id="box2"></div>
+            <div class="discount-box" id="box2"></div>
+            <div class="discount-box" id="box2"></div>
+          </div>
         </div>
 
-        <!-- box 6 -->
-        <div class="category-box-container">
-          <div class="invis-box"></div>
-          <img
-            src="image/category-buah-sayur.jpg"
-            class="category-content"
-            id="buah-sayur"
-            alt="Buah Sayur Image"
-          />
+        <!--======discount container 2 ===== -->
+
+        <div class="discount-product-section">
+          <h2>Flash sale</h2>
+          <div class="discount-product-list-container">
+            <div class="discount-title"></div>
+
+            <!-- discount card list  -->
+            <div class="discount-product-list">
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+              <div class="product-card"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- discount page end -->
+
+    <!-- category section -->
+
+    <section class="category-section">
+      <header class="header-category">
+        <div class="header-image">
+          <h1>Pupuk</h1>
+        </div>
+      </header>
+
+      <div class="main-container-category">
+        <nav class="nav-category-container">
+          <div class="category-nav-links">
+            <ul>
+              <li>Pupuk</li>
+              <li>Bibit</li>
+              <li>Perlengkapan</li>
+              <li>Media</li>
+              <li>Buah dan sayur</li>
+              <li>Lorem ipsum</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- category section end -->
   </body>
 </html>
