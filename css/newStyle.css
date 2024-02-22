@@ -115,7 +115,7 @@ body {
 /* main style */
 .landing-page {
   width: 100%;
-  height: 90vh;
+  height: 670px;
 
   padding: 1rem 1%;
   display: flex;
@@ -170,7 +170,7 @@ body {
 }
 .discount-main-container {
   width: 100%;
-  height: 150vh;
+  height: auto;
   overflow: hidden;
   margin: 0 auto;
   background-color: #663399;
@@ -262,7 +262,7 @@ h2 {
 
 .category-section {
   width: 100%;
-  height: 120vh;
+  height: auto;
 
   background-color: antiquewhite;
 }
@@ -300,6 +300,11 @@ li {
   list-style: none;
 }
 
+/* atur padding untuk section utama nav dan product card list  */
+.nav-product-category-container {
+  margin: 0 2rem;
+}
+
 .category-nav-container {
   width: 100%;
   overflow-x: auto;
@@ -310,8 +315,7 @@ li {
   white-space: nowrap;
   display: block !important;
   flex-wrap: nowrap;
-  margin: 0 auto;
-  max-width: 90vw;
+
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -323,6 +327,13 @@ li {
   display: inline-block;
   margin: 0 1rem;
   font-size: larger;
+}
+
+.category-product-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
 /* for mobile */
@@ -479,4 +490,19 @@ li {
   }
 
   /* discoutn page end */
+
+  /* category page */
+  .category-product-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 5px;
+  }
+
+  .nav-product-category-container {
+    margin: 0 10px;
+  }
+
+  .product-card {
+    width: 170px;
+    height: 250px;
+  }
 }
