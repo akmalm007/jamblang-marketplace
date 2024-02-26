@@ -7,13 +7,25 @@
 }
 
 :root {
-  --green: #57605a;
-  --green-opa: rgba(87, 96, 90, 0.5);
-  --black: 0b0c0d;
-  --white: #eeeced;
+  --background: rgb(241, 247, 243);
+  --primary: #bfe8c9;
+  --primary-opacity: rgba(87, 96, 90, 0.5);
 
-  --tran: all 0.5s ease;
-  --tran02: all 0.2 ease;
+  --secondary: #93d297;
+  --secondary-opacity: rgba(147, 210, 151, 0.25);
+
+  --accent: #358265;
+  --accent-opacity: rgba(53, 130, 101, 0.25);
+
+  --background: #f2f8f7;
+  --background-opacity: rgba(242, 248, 247, 0.5);
+
+  --text: #050a06;
+  --text-opacity: rgba(5, 10, 6, 0.5);
+
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow2: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 ::-webkit-scrollbar {
@@ -50,8 +62,13 @@
   background: transparent;
 }
 body {
-  background-color: #eeeced;
+  background-color: var(--background);
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .text a {
@@ -70,14 +87,25 @@ body {
 }
 
 .desktop-nav {
+  box-shadow: var(--shadow);
+  border: 2px solid rgb(153, 201, 185);
   visibility: visible;
   display: flex;
-  background-color: rgb(152, 152, 152);
+  background-color: rgba(184, 231, 213, 0.769);
+  backdrop-filter: blur(10px);
   height: fit-content;
   width: 100%;
+  padding: 2px 0;
+  z-index: 1000;
+  margin: 5px 5px;
   align-items: center;
   justify-content: space-around;
   position: fixed;
+  border-radius: 10px;
+}
+.nav-links {
+  font-size: x-large;
+  color: var(--text);
 }
 .mobile-nav {
   visibility: hidden;
@@ -88,6 +116,29 @@ body {
   display: none;
 }
 
+/* Inline #2 | http://127.0.0.1:5500/index.html */
+
+.search-box {
+  width: 400px;
+  display: flex;
+  height: 35px;
+}
+
+.search-button {
+  height: auto;
+  width: fit-content;
+  padding: 0 1rem;
+  outline: none;
+  border: none;
+}
+
+input {
+  list-style: none;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
@@ -96,7 +147,7 @@ body {
 .user-box {
   width: fit-content;
   height: fit-content;
-  padding: 5px 10px;
+  padding: 2px 10px;
   border-radius: 20px;
   background-color: #eeeced;
   display: inline-flex;
@@ -113,57 +164,155 @@ body {
 /* landing page section start */
 
 /* main style */
-.landing-page {
-  width: 100%;
-  height: 670px;
-
-  padding: 1rem 1%;
-  display: flex;
-}
-
-/* content kiri  */
-.container1 {
-  width: 49%;
-  height: 100%;
-  /* background-color: red; */
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.box-content-main {
-  width: 100%;
-  height: 50%;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-.box-container {
-  display: flex;
-  width: 100%;
-  height: 50%;
-  margin-top: 10px;
-  gap: 10px;
-}
-.box-content-bottom {
-  width: 50%;
-  border: 2px solid black;
-
-  height: 100%;
-  border-radius: 10px;
-}
-
-/* content kedua */
-.container2 {
-  width: 50%;
-  height: 100%;
-  border-radius: 10px;
-  margin: 10px;
-
-  border: 2px solid black;
-}
 
 /* landing page section end  */
 
+/*  =====LANDING PAGE KEDUA */
+
+/* newStyle.css | http://127.0.0.1:5500/css/newStyle.css */
+
+.landing-page {
+  background-color: rgb(232, 239, 237);
+  height: 600px;
+  box-shadow: var(--shadow);
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 6vh;
+  padding: 1rem 0;
+  border-radius: 15px;
+}
+
+.container1 {
+  /* background-image: url(../image/blurrygrd1.svg); */
+  background-image: url(../image/blurrygrd3.svg);
+  background-position: center;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin: 0 10px;
+  height: 100%;
+  display: flex;
+}
+
+.slogan {
+  font-weight: normal;
+  width: 500px;
+  word-wrap: break-word;
+}
+
+.landing-page-title {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.web-title-container {
+  margin: auto;
+}
+
+.stats-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+}
+
+/* Element | http://127.0.0.1:5500/index.html */
+
+/* Inline #2 | http://127.0.0.1:5500/index.html */
+
+.container2 {
+  box-shadow: var(--shadow2);
+  width: 50%;
+  height: 100%;
+  margin: 0 1rem;
+  border-radius: 10px;
+  background-image: url(../image/landingbg.jpg);
+  background-size: cover;
+  background-position-x: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-landing-page {
+  font-size: 62px;
+}
+
+.stats-box {
+  background-color: #cdeee3c9;
+  backdrop-filter: blur(5px);
+  box-shadow: var(--shadow);
+  width: 135px;
+}
+
+.stats-box {
+  /* display: fe; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.login-container {
+  margin-top: 1rem;
+  /* display: flex; */
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.login-container button {
+  height: 50px;
+  width: 200px;
+  /* margin: 0 1rem; */
+  outline: none;
+
+  border-radius: 50px;
+  font-weight: bolder;
+  font-family: inherit;
+}
+
+.login {
+  color: white;
+  font-size: larger;
+  background: #9ccec2;
+  border: 2px solid hsl(166, 34%, 71%);
+  border-radius: 20px;
+}
+
+.login,
+.signup {
+  box-shadow: var(--shadow2);
+}
+
+.signup {
+  background: #6dbd9d;
+  border: none;
+  color: white;
+}
+
+.socmed-box {
+  text-align: right;
+  font-size: xx-large;
+  width: fit-content;
+  background-color: #9ccec2;
+  padding: 5px;
+  border-radius: 10px;
+}
+.temukan {
+  width: fit-content;
+}
+
+.temukan,
+.socmed-box {
+  margin: 0 auto;
+}
+
+/* ======LANDING PAGE KEDUA END */
 /* discount page  */
 .discount-section {
   margin: 0 1%;
@@ -173,7 +322,6 @@ body {
   height: auto;
   overflow: hidden;
   margin: 0 auto;
-  background-color: #663399;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,7 +334,6 @@ h2 {
 }
 
 .discount-header-container {
-  background-color: red;
   margin: px;
   max-width: 100%;
   overflow-x: scroll;
@@ -212,7 +359,6 @@ h2 {
 .discount-product-section {
   height: fit-content;
   max-width: 100%;
-  background-color: green; /* Warna latar belakang untuk bagian diskon */
 }
 
 .discount-product-list-container {
@@ -251,6 +397,34 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek ketinggian */
 }
 
+/* Inline #2 | http://127.0.0.1:5500/index.html */
+
+.product-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-title {
+  width: 100%;
+  height: fit-content;
+}
+fi .before-discount-price {
+  font-size: smaller;
+}
+
+.star {
+  /* position: av absolute; */
+  /* position: ab; */
+  margin-top: 19px;
+}
+
+.before-discount-price {
+  color: gray;
+  text-decoration: line-through;
+}
+
 /* Gaya untuk judul "Flash sale" */
 h2 {
   color: #333; /* Warna teks judul */
@@ -263,8 +437,7 @@ h2 {
 .category-section {
   width: 100%;
   height: auto;
-
-  background-color: antiquewhite;
+  margin-top: 5vh;
 }
 
 .main-container-category {
@@ -291,7 +464,7 @@ h2 {
 .header-image {
   width: 100%;
   background-color: green;
-  height: 200px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -311,7 +484,8 @@ li {
 }
 
 .category-nav-links {
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding: 10px;
   white-space: nowrap;
   display: block !important;
   flex-wrap: nowrap;
@@ -319,8 +493,6 @@ li {
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  border-left: 2px solid gray;
-  border-right: 2px solid gray;
 }
 
 .category-nav-links li {
@@ -434,23 +606,62 @@ li {
   /* nav search section end */
 
   /* landing page section */
-
   .landing-page {
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 70px;
-    /* margin mengikuti tinggi searchbox */
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column-reverse;
+    height: fit-content;
   }
 
   .container1 {
     width: 100%;
+    height: 50%;
     margin: 0;
-    margin-bottom: 10px;
   }
 
+  .landing-page-title {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .slogan {
+    margin: 0 auto;
+    text-align: center;
+    font-size: small;
+    width: 60%;
+    height: fit-content;
+    word-wrap: break-word;
+  }
+  .web-title-container {
+    margin: 2rem auto;
+    width: fit-content;
+  }
   .container2 {
     width: 100%;
+    height: 20vh;
     margin: 0;
+
+    margin-top: 6vh;
+    background-position-y: center;
+  }
+
+  .socmed-box {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: xx-large;
+    float: unset;
+  }
+  .temukan {
+    margin: 0 auto;
+    float: unset;
+  }
+
+  .login-container {
+    margin: 0 auto;
+    width: fit-content;
   }
 
   /* discount page  */
@@ -478,7 +689,7 @@ li {
   .discount-title {
     background-color: red;
     width: 1000px;
-    height: 50vh;
+    height: 40vh;
     margin-right: 0;
   }
   .discount-product-list {
@@ -507,5 +718,41 @@ li {
     align-self: center;
     justify-self: center;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing-page {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column-reverse;
+    height: fit-content;
+  }
+
+  .container1 {
+    width: 100%;
+    height: 50%;
+  }
+
+  .landing-page-title {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .slogan {
+    margin: 0 auto;
+    text-align: center;
+    font-size: small;
+    width: 100%;
+    height: fit-content;
+    word-wrap: break-word;
+  }
+
+  .container2 {
+    width: 100%;
+    height: 30vh;
   }
 }
