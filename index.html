@@ -14,23 +14,27 @@
     <nav class="desktop-nav">
       <h1 class="web-title">Plantopia</h1>
 
-      <div class="search-box box">
-        <button class="search-button">
-          <i class="bx bx-search-alt-2 search-icon"></i>
-        </button>
-        <input type="search" name="" id="" />
+      <div class="search-container">
+        <div class="search-box">
+          <button class="search-button">
+            <i class="bx bx-search-alt-2 search-icon"></i>
+          </button>
+          <input type="search" name="" id="" />
+        </div>
       </div>
 
-      <div class="nav-links">
-        <i class="bx bxs-message-dots"></i>
-        <i class="bx bxs-cart-alt"></i>
-        <i class="bx bxs-heart"></i>
-      </div>
+<div class="feature-profile-container" style="display: flex; align-items: center; gap: 2rem;">
+  <div class="nav-links">
+    <i class="bx bxs-message-dots"></i>
+    <i class="bx bxs-cart-alt"></i>
+    <i class="bx bxs-heart"></i>
+  </div>
 
-      <div class="user-box">
-        <p>Username</p>
-        <div class="user-profile"></div>
-      </div>
+  <div class="user-box">
+    <p>Username</p>
+    <div class="user-profile"></div>
+  </div>
+</div>
     </nav>
 
     <!-- FOR MOBILE NAV AND SEARCH BOX  -->
@@ -43,7 +47,10 @@
           <input type="search" name="" id="" />
         </div>
 
+        <div class="user-box">
+        <p>Username</p>
         <div class="user-profile"></div>
+      </div>
       </div>
 
       <nav class="mobile-nav">
@@ -92,10 +99,15 @@
             
           </div>
 
-          <br>
-          <br>
-          <br>
-          <br>
+     
+          <p class="temukan">Temukan kami di:</p>
+
+          <div class="socmed-box">
+            <a href="" class="socmed-icon"><i class='bx bxl-youtube' ></i></a>
+            <a href="" class="socmed-icon"><i class='bx bxl-twitter' ></i></a>
+            <a href="" class="socmed-icon"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="" class="socmed-icon"><i class='bx bxl-facebook-square'></i></a>
+          </div>
         </div>
         <div class="container2">
           <div class="stats-container">
@@ -112,18 +124,64 @@
               <h1>100RB+</h1>
             </div>
           </div>
-          <p class="temukan">Temukan kami di:</p>
 
-          <div class="socmed-box">
-            <a href="" class="socmed-icon"><i class='bx bxl-youtube' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-twitter' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-instagram-alt' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-facebook-square'></i></a>
-          </div>
+          
         </div>
       </section>
       <!-- landing page section end -->
 
+      <!-- our product -->
+      <h1 style="margin-bottom: 1rem; text-align: center;">Cari semua kebutuhan anda disini </h1>
+      <section class="our-product-section">
+        <div class="our-product-container1">
+          <div class="image-content"><img src="image/category-pupuk.jpg" alt=""></div>
+          <div class="image-content"><img src="image/category-tanaman-hias.jpg" alt=""></div>
+        </div>
+        <div class="our-product-container2">
+          <h1 style="text-align: center; width: 90%;">Mulai dari bibit, pupuk,perlengkapan, dan lainnya.</h1>
+
+        </div>
+        <div class="our-product-container3">
+          <div class="image-content"><img src="image/category-buah-sayur.jpg" alt=""></div>
+          <div class="image-content"><img src="image/category-peralatan.jpg" alt=""></div>
+        </div>
+      </section>
+      
+      <!-- our product end-->
+
+      <!-- ===== MITRA SECTION  -->
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <button class="carousel-button prev" onclick="prevItem()">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <div class="carousel-wrapper">
+            <div class="carousel-item item1">
+              <div class="container"></div>
+              <div class="container"></div>
+            </div>
+            <div class="carousel-item item2">
+              <div class="container"></div>
+              <div class="container"></div>
+            </div>
+            <div class="carousel-item item3">
+              <div class="container"></div>
+              <div class="container"></div>
+            </div>
+            <div class="carousel-item item4">
+              <div class="container"></div>
+              <div class="container"></div>
+            </div>
+          </div>
+          <button class="carousel-button next" onclick="nextItem()">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+      
+      <!-- ======MITRA SECTION END -->
+
+      
       <!-- discount page  -->
       <section class="discount-section">
         <!-- main container -->
@@ -145,13 +203,15 @@
           <div class="discount-product-section">
             <h2>Flash sale</h2>
             <div class="discount-product-list-container">
-              <div class="discount-title"></div>
+              <div class="discount-title"><h1>DISCOUNT PENGGUNA BARU </h1></div>
 
               <!-- discount card list  -->
               <div class="discount-product-list">
-                <a href="detailProduct.html"><div class="product-card">
+                <div class="discount-title-mobile"> <h1>DISCOUNT PENGGUNA BARU </h1></div>
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
                   <img
-                    src="image/category-bibit.jpg"
+                    src="image/product-example.jpg"
                     alt="product image"
                     class="product-image"
                   />
@@ -161,12 +221,15 @@
                   <div class="price-star-container">
                     <h3 class="product-price">Rp 180.000</h3>
                     <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
                   </div>
                 </div></a>
-                <a href="detailProduct.html"><div class="product-card">
+                <!-- ========= -->
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
                   <img
-                    src="image/category-bibit.jpg"
+                    src="image/product-example.jpg"
                     alt="product image"
                     class="product-image"
                   />
@@ -176,12 +239,14 @@
                   <div class="price-star-container">
                     <h3 class="product-price">Rp 180.000</h3>
                     <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
                   </div>
                 </div></a>
-                <a href="detailProduct.html"><div class="product-card">
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
                   <img
-                    src="image/category-bibit.jpg"
+                    src="image/product-example.jpg"
                     alt="product image"
                     class="product-image"
                   />
@@ -191,12 +256,14 @@
                   <div class="price-star-container">
                     <h3 class="product-price">Rp 180.000</h3>
                     <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
                   </div>
                 </div></a>
-                <a href="detailProduct.html"><div class="product-card">
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
                   <img
-                    src="image/category-bibit.jpg"
+                    src="image/product-example.jpg"
                     alt="product image"
                     class="product-image"
                   />
@@ -206,12 +273,14 @@
                   <div class="price-star-container">
                     <h3 class="product-price">Rp 180.000</h3>
                     <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
                   </div>
                 </div></a>
-                <a href="detailProduct.html"><div class="product-card">
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
                   <img
-                    src="image/category-bibit.jpg"
+                    src="image/product-example.jpg"
                     alt="product image"
                     class="product-image"
                   />
@@ -221,7 +290,8 @@
                   <div class="price-star-container">
                     <h3 class="product-price">Rp 180.000</h3>
                     <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
                   </div>
                 </div></a>
 
@@ -250,180 +320,134 @@
               <li>Buah dan sayur</li>
               <li>Lorem ipsum</li>
               <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
+
             </ul>
           </nav>
           <div class="category-product-container">
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
+              <!-- =======PRODUCT CARD AREA -->
 
+              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                  <p style="font-size: x-small;">100 Ulasan</p>
+                </div>
+              </div></a>
+              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                  <p style="font-size: x-small;">100 Ulasan</p>
+                </div>
+              </div></a>
+              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                  <p style="font-size: x-small;">100 Ulasan</p>
+                </div>
+              </div></a>
+              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                  <p style="font-size: x-small;">100 Ulasan</p>
+                </div>
+              </div></a>
+              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                  <p style="font-size: x-small;">100 Ulasan</p>
+                </div>
+              </div></a>
+                              <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                  </h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
+                  </div>
+                </div></a>
+                <a href="detailProduct.html" class="product-card-link-container"><div class="card2">
+                  <span class="tag" ><i class='bx bxs-tag' style="font-size: large; padding: 0 3px;"></i>Tanaman Hias</span>
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                  </h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p style="font-size: x-small;">100 Ulasan</p>
+                  </div>
+                </div></a>
+                
+              
+              <!-- PRODUCT-CARD AREA END -->
           </div>
         </div>
       </section>
@@ -478,6 +502,29 @@
         box.scrollLeft = scrollLeft - walkX;
         box.scrollTop = scrollTop - walkY;
       });
+
+
+      // ====CAROUSEL FUNCTION
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".carousel-item");
+      const totalItems = items.length;
+
+      function showItem(index) {
+        const newPosition = -index * 100 + "%";
+        document.querySelector(
+          ".carousel-wrapper"
+        ).style.transform = `translateX(${newPosition})`;
+      }
+
+      function nextItem() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showItem(currentIndex);
+      }
+
+      function prevItem() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showItem(currentIndex);
+      } 
     </script>
   </body>
 </html>
