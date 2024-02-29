@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -123,24 +124,27 @@ body {
   visibility: hidden;
   display: none;
 }
-
 .search-container {
   width: 400px;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .search-box {
   display: flex;
   width: 100%;
+  background: white;
+  padding: 5px;
 }
 
 .search-button {
-  color: black;
+  color: #57735f;
   border: none;
-  padding: 3px 20px;
-
   cursor: pointer;
+  object-position: center;
+  background-color: white;
+  text-align: center;
+  margin: 0 10px;
 }
 
 .search-icon {
@@ -152,6 +156,7 @@ input[type="search"] {
   padding: 2pxx;
   border: none;
   outline: none;
+  border-bottom: 2px solid rgb(22, 102, 68);
 }
 
 /* Styling tambahan sesuai kebutuhan */
@@ -178,11 +183,15 @@ input[type="search"] {
 }
 
 .user-profile {
-  background-color: red;
+  background-color: rgb(101, 167, 147);
   height: 35px;
   width: 35px;
   border-radius: 50%;
   margin-left: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
 }
 
 /* landing page section start */
@@ -699,6 +708,7 @@ h2 {
 
 .product-title {
   width: 100%;
+  font-weight: 500;
   height: fit-content;
   overflow: hidden;
   display: -webkit-box;
@@ -763,7 +773,6 @@ h2 {
 
 .star {
   font-size: small;
-  margin-top: 10px;
   color: rgb(230, 230, 12);
   text-shadow: var(--shadow);
 }
@@ -887,7 +896,7 @@ li {
     width: 100%;
     height: 60px;
     position: fixed;
-    background-color: rebeccapurple;
+    background-color: rgb(133, 173, 158);
     visibility: visible;
     display: flex;
     align-items: center;
@@ -911,6 +920,8 @@ li {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
   }
 
   input[type="search"] {
@@ -1066,8 +1077,14 @@ li {
 
   .text-container {
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
+    overflow: auto;
   }
+
+  .mitra.container {
+    overflow: auto;
+  }
+
   .mitra .shop-name {
     font-size: larger; /* Large */
     font-weight: bold;
@@ -1107,8 +1124,9 @@ li {
   }
 
   .discount-product-section {
-    height: 400px;
+    height: 600px;
     max-width: 100vw;
+    overflow: auto;
     /* Warna latar belakang untuk bagian diskon */
   }
 
@@ -1149,6 +1167,7 @@ li {
     max-width: 100%;
     align-items: center;
     display: flex;
+    gap: 30px;
     border-radius: 10px;
     word-wrap: break-word;
     /* Memberikan sudut melengkung pada daftar produk */
@@ -1176,6 +1195,7 @@ li {
     margin: 0;
   }
   .card2 {
+    width: 300px;
     height: 470px;
     align-self: center;
     justify-self: center;
@@ -1191,14 +1211,12 @@ li {
     height: 290px;
   }
   .star {
-    margin-top: 10px;
     width: 100%;
     text-align: center;
-    font-size: large;
+    font-size: medium;
   }
   .product-title {
     font-size: large;
-    font-weight: 600;
   }
 }
 
@@ -1240,7 +1258,7 @@ li {
   /* MITRA SECTION */
 
   .carousel-container {
-    height: 60vh;
+    height: 70vh;
   }
   .carousel-item {
     display: flex;
@@ -1249,7 +1267,7 @@ li {
 
   /* MITRA SECTION END */
   .card2 {
-    width: 90%;
+    width: 300px;
     margin: auto;
     align-self: center;
   }
