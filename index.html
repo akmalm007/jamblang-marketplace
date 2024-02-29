@@ -150,33 +150,55 @@
       <!-- our product end-->
 
       <!-- ===== MITRA SECTION  -->
-      <section class="carousel-section">
-        <div class="carousel-container">
-          <button class="carousel-button prev" onclick="prevItem()">
-            <i class="bx bx-chevron-left"></i>
-          </button>
-          <div class="carousel-wrapper">
-            <div class="carousel-item item1">
-              <div class="container"></div>
-              <div class="container"></div>
+      <section>
+              <h1 style="width: fit-content;margin-left: 3%; margin-top: 10vh;"> Temukan mitra kami di sekitar mu</h1>
+      
+    <section class="carousel-section">
+      <div class="carousel-container">
+        <button class="carousel-button prev" onclick="prevItem()">
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <div class="carousel-wrapper">
+
+          <!-- =====ITEM====== -->
+          <div class="carousel-item item1">
+            <div class="container mitra">
+              <img class="shop-image" src="image/toko.jpg" alt="">
             </div>
-            <div class="carousel-item item2">
-              <div class="container"></div>
-              <div class="container"></div>
-            </div>
-            <div class="carousel-item item3">
-              <div class="container"></div>
-              <div class="container"></div>
-            </div>
-            <div class="carousel-item item4">
-              <div class="container"></div>
-              <div class="container"></div>
+            <div class="container mitra" style="background-image: url(/image/blurrygrd3.svg);"><div class="text-container">
+              <h1 class="shop-name">Toko Pak Santoso</h1>
+      
+              <div class="contact-info mitra">
+                  <h2> <i class='bx bxs-phone-call'></i> Kontak:</h2>
+                  <p class="shop-contact">Telepon: (021) 1234-5678  <span style="color: rgb(61, 61, 112);">Santosohijau@gmail.com</span>  </p>
+              </div>
+      
+              <div class="operational-hours mitra">
+                  <h2> <i class='bx bxs-time' ></i> Jam Operasional:</h2>
+                  <p class="operational-time">Senin-Jumat: 09.00 - 18.00</p>
+                  <p class="operational-time">Sabtu-Minggu: 10.00 - 16.00</p>
+              </div>  
+
+              <div class="available-products mitra">
+                  <h2> <i class='bx bxs-leaf' ></i> Jenis Produk yang Tersedia:</h2>
+                  <p class="available-product">- Tanaman hias,Pupuk,Perlengkapan Kebun,Pot,bibit</p>
+              </div>
+
+              <div class="loc mitra">
+                  <h2> <i class='bx bxs-map' ></i> Alamat</h2>
+                  <p class="loc"> Jl. Beringin kel.Sukmajaya , kec. Cilodong, Depok</p>
+                  <a href=""> Lihat selengkapnya</a>
+              </div>
+              
             </div>
           </div>
-          <button class="carousel-button next" onclick="nextItem()">
-            <i class="bx bx-chevron-right"></i>
-          </button>
+
         </div>
+        <button class="carousel-button next" onclick="nextItem()">
+          <i class="bx bx-chevron-right"></i>
+        </button>
+      </div>
+  </section>
       </section>
       
       <!-- ======MITRA SECTION END -->
@@ -464,44 +486,6 @@
         "--screen-width",
         screenWidth + "px"
       );
-
-      const box = document.getElementById("box");
-
-      let isDown = false;
-      let startX;
-      let startY;
-      let scrollLeft;
-      let scrollTop;
-
-      box.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - box.offsetLeft;
-        startY = e.pageY - box.offsetTop;
-        scrollLeft = box.scrollLeft;
-        scrollTop = box.scrollTop;
-        box.style.cursor = "grabbing";
-      });
-
-      box.addEventListener("mouseleave", () => {
-        isDown = false;
-        box.style.cursor = "grab";
-      });
-
-      box.addEventListener("mouseup", () => {
-        isDown = false;
-        box.style.cursor = "grab";
-      });
-
-      document.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - box.offsetLeft;
-        const y = e.pageY - box.offsetTop;
-        const walkX = (x - startX) * 1; // Change this number to adjust the scroll speed
-        const walkY = (y - startY) * 1; // Change this number to adjust the scroll speed
-        box.scrollLeft = scrollLeft - walkX;
-        box.scrollTop = scrollTop - walkY;
-      });
 
 
       // ====CAROUSEL FUNCTION
