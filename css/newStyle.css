@@ -456,7 +456,7 @@ input[type="search"] {
   transform: translateY(-50%);
   font-size: 18px;
   cursor: pointer;
-  background-color: #3498db;
+  background-color: #50a381;
   color: #fff;
   border: none;
   padding: 10px;
@@ -475,7 +475,7 @@ input[type="search"] {
 /* Item colors for demonstration purposes */
 
 .mitra.container {
-  background-color: rgb(238, 245, 238);
+  background-color: rgb(238, 247, 238);
   height: 100%;
   width: 50%;
   border-radius: 15px;
@@ -537,7 +537,7 @@ input[type="search"] {
 }
 
 .item1 {
-  background-color: #3498db;
+  /* background-color: #3498db; */
 }
 .item2 {
   background-color: #2ecc71;
