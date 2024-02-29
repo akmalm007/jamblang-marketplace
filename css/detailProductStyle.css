@@ -57,18 +57,30 @@ body {
 
 /* NAV SECTION */
 .desktop-nav {
+  box-shadow: var(--shadow);
+  border: 2px solid rgb(153, 201, 185);
   visibility: visible;
   display: flex;
-  background-color: var(--secondary);
-  filter: blur(100%);
+  background-color: rgba(184, 231, 213, 0.769);
+  backdrop-filter: blur(10px);
   height: fit-content;
   width: 100%;
+  z-index: 1000;
+  padding: 5px 0;
   align-items: center;
   justify-content: space-around;
   position: fixed;
 
-  z-index: 100;
+  & h1 {
+    font-size: x-large;
+  }
 }
+
+.nav-links {
+  font-size: x-large;
+  color: var(--text);
+}
+
 .mobile-nav {
   visibility: hidden;
 }
@@ -77,29 +89,81 @@ body {
   visibility: hidden;
   display: none;
 }
+.search-container {
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  background: white;
+  padding: 5px;
+}
+
+.search-button {
+  color: #57735f;
+  border: none;
+  cursor: pointer;
+  object-position: center;
+  background-color: white;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.search-icon {
+  font-size: 20px; /* Ganti ukuran ikon sesuai kebutuhan */
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 2pxx;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(22, 102, 68);
+}
+
+/* Styling tambahan sesuai kebutuhan */
+
+/* Styling tambahan sesuai kebutuhan */
 
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
+
+  & a {
+    text-decoration: none;
+    color: #365e46;
+  }
 }
 
 .user-box {
   width: fit-content;
   height: fit-content;
-  padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: #eeeced;
   display: inline-flex;
   align-items: center;
+  padding-left: 1rem;
+
+  & p {
+    margin-right: 1rem;
+  }
 }
 
 .user-profile {
-  background-color: red;
+  background-color: rgb(101, 167, 147);
   height: 35px;
   width: 35px;
   border-radius: 50%;
   margin-left: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
 }
+
 /* NAV SECTION END */
 
 .main-content {
@@ -318,7 +382,7 @@ body {
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(133, 173, 158);
     position: fixed;
     bottom: 0;
     display: flex;
@@ -334,6 +398,10 @@ body {
     height: 50%;
     margin: 0 auto;
     justify-content: space-around;
+
+    & a {
+      color: inherit;
+    }
   }
 
   .web-title {
@@ -345,12 +413,13 @@ body {
     width: 100%;
     height: 60px;
     position: fixed;
-    background-color: rebeccapurple;
+    background-color: rgb(133, 173, 158);
     visibility: visible;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan untuk kedalaman */
   }
 
   .search-container {
@@ -360,13 +429,16 @@ body {
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
-    width: 50%; /* Lebar container pencarian */
+    width: 50%;
+    /* Lebar container pencarian */
   }
 
   .search-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
   }
 
   input[type="search"] {
@@ -377,20 +449,22 @@ body {
     font-size: 16px;
     color: #333;
   }
+
   /* Icon pencarian */
   .search-icon {
     font-size: 24px;
-    color: rebeccapurple;
+    color: #65a793;
     margin-left: 10px;
   }
 
   .user-profile {
-    background-color: red;
-    height: 2rem;
-    width: 2rem;
+    background-color: rgb(101, 167, 147);
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0;
   }
+
   /* Hover effect pada tombol pencarian */
   .search-button:hover {
     background-color: #ddd;

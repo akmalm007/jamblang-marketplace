@@ -26,7 +26,7 @@
   --background: #f2f8f7;
   --background-opacity: rgba(242, 248, 247, 0.5);
 
-  --text: #050a06;
+  --text: #1d2b27;
   --text-opacity: rgba(5, 10, 6, 0.5);
 
   --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -93,11 +93,17 @@ body {
 
 .desktop-nav {
   box-shadow: var(--shadow);
-  border: 2px solid rgb(153, 201, 185);
+
   visibility: visible;
   display: flex;
-  background-color: rgba(184, 231, 213, 0.769);
-  backdrop-filter: blur(10px);
+  /* From https://css.glass */
+  background: rgba(143, 230, 179, 0.64);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(91, 235, 175, 0.66);
+  /* effect */
   height: fit-content;
   width: 100%;
   z-index: 1000;
@@ -144,7 +150,7 @@ body {
   object-position: center;
   background-color: white;
   text-align: center;
-  margin: 0 10px;
+  margin: 3px 10px 0;
 }
 
 .search-icon {
@@ -166,6 +172,11 @@ input[type="search"] {
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
+
+  & a {
+    text-decoration: none;
+    color: #365e46;
+  }
 }
 
 .user-box {
@@ -209,7 +220,7 @@ input[type="search"] {
   display: flex;
   width: 100%;
   margin: 0 auto 15vh;
-  margin-top: 6vh;
+  margin-top: 3vh;
   padding: 1rem 0;
   border-radius: 15px;
 }
@@ -251,9 +262,17 @@ input[type="search"] {
   width: 100%;
   height: 150px;
   padding: 1rem;
-  background: #e2ffdf2e;
-  border-radius: 50px 50px 0 0;
-  backdrop-filter: blur(5px);
+  /* From https://css.glass */
+  background: rgba(213, 241, 236, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(213, 241, 236, 0.45);
+
+  & h5 {
+    font-weight: 500;
+  }
 }
 
 /* Element | http://127.0.0.1:5500/index.html */
@@ -279,8 +298,13 @@ input[type="search"] {
 }
 
 .stats-box {
-  background-color: #cdeee3c9;
-  backdrop-filter: blur(5px);
+  /* From https://css.glass */
+  background: rgba(213, 241, 236, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(213, 241, 236, 0.45);
   box-shadow: var(--shadow);
   width: 135px;
 }
@@ -314,11 +338,15 @@ input[type="search"] {
 }
 
 .login {
-  color: white;
   font-size: larger;
   background: #9ccec2;
   border: 2px solid hsl(166, 34%, 71%);
   border-radius: 20px;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .login,
@@ -339,7 +367,7 @@ input[type="search"] {
 
   color: inherit;
   & a {
-    color: inherit;
+    color: #3a6458;
   }
 }
 
@@ -565,7 +593,7 @@ input[type="search"] {
 
 /* discount page  */
 .discount-section {
-  margin: 15vh auto 15vh;
+  margin: 0 auto;
 }
 
 .discount-main-container {
@@ -739,6 +767,7 @@ h2 {
   right: 0;
   display: flex;
   text-align: center;
+  align-items: center;
 }
 /* Gaya untuk judul "Flash sale" */
 h2 {
@@ -783,6 +812,7 @@ h2 {
   width: 100%;
   height: auto;
   margin-top: 5vh;
+  scroll-margin: 10vh;
 }
 
 .main-container-category {
@@ -793,7 +823,6 @@ h2 {
 }
 
 .header-category {
-  background-color: gray;
   width: 80%;
   margin: 0 auto;
 
@@ -808,10 +837,11 @@ h2 {
 
 .header-image {
   width: 100%;
-  background-color: green;
+  background-color: rgb(105, 212, 158);
   height: 100px;
   display: flex;
   align-items: center;
+  border-radius: 15px;
 }
 
 li {
@@ -846,6 +876,18 @@ li {
   font-size: larger;
 }
 
+.active {
+  background-color: rgb(58, 138, 91);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .category-product-container {
   margin-top: 50px;
   display: grid;
@@ -855,8 +897,16 @@ li {
   padding-bottom: 10vh;
 }
 
+.section-title {
+  font-weight: 500;
+  margin-top: 10vh;
+}
 /* for mobile */
 @media only screen and (max-width: 1024px) {
+  .section-title {
+    font-size: larger;
+    text-align: center;
+  }
   * {
     margin: 0;
     padding: 0;
@@ -869,7 +919,7 @@ li {
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(133, 173, 158);
     position: fixed;
     bottom: 0;
     display: flex;
@@ -885,6 +935,10 @@ li {
     height: 50%;
     margin: 0 auto;
     justify-content: space-around;
+
+    & a {
+      color: inherit;
+    }
   }
 
   .web-title {
@@ -936,12 +990,12 @@ li {
   /* Icon pencarian */
   .search-icon {
     font-size: 24px;
-    color: rebeccapurple;
+    color: #65a793;
     margin-left: 10px;
   }
 
   .user-profile {
-    background-color: red;
+    background-color: rgb(101, 167, 147);
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
@@ -1079,6 +1133,7 @@ li {
     text-align: center;
     padding: 10px;
     overflow: auto;
+    margin: auto;
   }
 
   .mitra.container {
@@ -1117,6 +1172,7 @@ li {
 
   .discount-main-container {
     width: 100vw;
+    padding: 1rem;
   }
 
   .discount-box {
