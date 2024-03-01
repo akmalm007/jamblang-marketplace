@@ -44,10 +44,14 @@
   background-color: #75a374;
 }
 :root {
-  --background: #f0f9f4;
-  --primary: #dfe9df;
-  --secondary: #d7f1ee;
-  --accent: #2e7d32;
+  --green: rgb(101, 167, 147);
+  --primary: rgb(118, 221, 164);
+  --secondary: rgb(75, 117, 96);
+  --accent: #9cceaf;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -58,11 +62,17 @@ body {
 /* NAV SECTION */
 .desktop-nav {
   box-shadow: var(--shadow);
-  border: 2px solid rgb(153, 201, 185);
+
   visibility: visible;
   display: flex;
-  background-color: rgba(184, 231, 213, 0.769);
-  backdrop-filter: blur(10px);
+  /* From https://css.glass */
+  background: rgba(143, 230, 179, 0.64);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(91, 235, 175, 0.66);
+  /* effect */
   height: fit-content;
   width: 100%;
   z-index: 1000;
@@ -194,7 +204,7 @@ input[type="search"] {
   height: 500px;
   margin: 0 auto;
   border-radius: 2%;
-  background-color: var(--primary);
+  background-color: var(--accent);
 }
 
 .display-photo-container {
@@ -230,7 +240,11 @@ input[type="search"] {
 .icon-container a {
   font-size: xx-large;
   text-decoration: none;
-  color: var(--background); /* Ganti dengan warna yang diinginkan */
+  color: white;
+
+  & .liked {
+    color: #ee4562;
+  }
 }
 
 .icon-container a:hover {
@@ -247,12 +261,64 @@ input[type="search"] {
 .other-photo {
   display: block;
   margin-bottom: 10px;
+  width: 100%;
+  height: 80px;
+  border-radius: 15px;
 }
 
 .other-photo img {
   width: 100%;
-  height: auto;
-  max-height: 100px; /* Sesuaikan dengan kebutuhan Anda */
+  height: 100%;
+
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 150px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+/* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
+
+.buy-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.beli {
+  padding: 10px 3rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#increment {
+  background-color: var(--primary);
+}
+
+#decrement {
+  background-color: rgb(224, 56, 56);
+}
+
+#increment,
+#decrement {
+  padding: 5px 20px;
+  margin: 0 1rem;
+  font-weight: 700;
+  font-size: x-large;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
 }
 
 /* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
@@ -261,11 +327,21 @@ input[type="search"] {
   width: 50%;
   height: auto;
 }
+
+.desc {
+  border-bottom: 2px solid var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.desc-content {
+  padding: 0 1rem;
+}
+
 .price-desc-container {
   box-shadow: var(--shadow);
   width: auto;
   height: 100%;
-  background-color: var(--secondary);
+  background-color: var(--card);
   margin: 0 1rem;
   padding: 2rem;
   border-radius: 15px;
@@ -299,6 +375,7 @@ input[type="search"] {
 
 .star {
   margin-right: 1rem;
+  color: #ebc23e;
 }
 
 .price {
@@ -318,7 +395,7 @@ input[type="search"] {
 /* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
 
 .review-title {
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: fit-content;
 }
 
@@ -332,7 +409,7 @@ input[type="search"] {
 
 .user-rating-main-container {
   display: flex;
-  background: var(--secondary);
+  background: var(--card);
   border-radius: 10px;
   padding: 1rem 2rem;
   margin-bottom: 1rem;
@@ -360,6 +437,7 @@ input[type="search"] {
 
 .star-user {
   padding: 1rem 0;
+  color: #ebc23e;
 }
 
 .profile {
@@ -486,6 +564,7 @@ input[type="search"] {
     width: 100%;
     flex-direction: column;
     height: auto;
+    background-color: transparent;
   }
   .photo-collection {
     display: inle;
@@ -497,6 +576,8 @@ input[type="search"] {
     max-width: 100%;
     overflow-x: auto;
     margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--accent);
   }
   .other-photo {
     /* width: 386px; */
@@ -511,35 +592,51 @@ input[type="search"] {
     width: 100px;
     object-fit: cover;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .photos-main-container {
     position: unset;
     margin-top: 5vh;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .display-photo-container {
     height: auto;
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
   }
   .display-photo {
     height: 300px;
+    padding: 0;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: var(--accent);
+
+    object-position: center;
   }
-  .icon-container {
-  }
-  .icon-container a {
-  }
-  .icon-container i {
-  }
+
   .buy-container {
+    width: 100%;
+    align-items: center;
+    top: 10rem;
+
+    & .beli {
+      padding: 1rem 2rem;
+      font-size: large;
+    }
+
+    & #increment,
+    #decrement {
+      padding: 5px 15px;
+    }
   }
   /* ======PHOTOS PRODUCT END */
 
   /* =======desc n price product */
   .detail-product-section {
     flex-direction: column;
+    padding-top: 1rem;
   }
 
   .photos-main-container {
@@ -554,8 +651,7 @@ input[type="search"] {
     padding: 1rem;
     margin: 0;
   }
-  .title-product {
-  }
+
   .star-tag-container {
     max-width: 100%;
     flex-wrap: wrap;
@@ -563,12 +659,6 @@ input[type="search"] {
   }
   .tags-box {
     margin: 1rem 0;
-  }
-  .star {
-  }
-  .price {
-  }
-  .before-discount-price {
   }
 
   .rating-section {

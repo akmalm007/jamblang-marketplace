@@ -3,244 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel Example</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <title>Counter Example</title>
     <style>
       body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
         margin: 0;
-        padding: 0;
         font-family: Arial, sans-serif;
       }
 
-      .carousel-section {
-        width: 100%;
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .carousel-container {
-        width: 90%;
-        overflow: hidden;
-        height: 100%;
-      }
-
-      .carousel-wrapper {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        height: 100%;
-      }
-
-      .carousel-item {
-        min-width: 100%;
-        box-sizing: border-box;
+      .counter-container {
         text-align: center;
-        line-height: 600px;
-        font-size: 24px;
-        color: #fff;
-        display: flex;
-        gap: 10px;
       }
 
-      .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 18px;
-        cursor: pointer;
-        background-color: #3498db;
-        color: #fff;
+      #count {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+
+      .button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        font-size: 1rem;
         border: none;
-        padding: 10px;
         border-radius: 5px;
+        cursor: pointer;
       }
 
-      .carousel-button.next {
-        right: 10px;
-      }
-
-      .carousel-button.prev {
-        left: 10px;
-      }
-
-      /* Item colors for demonstration purposes */
-      .item1 {
-        background-color: #3498db;
-      }
-      .item2 {
-        background-color: #2ecc71;
-      }
-      .item3 {
-        background-color: #e74c3c;
-      }
-      .item4 {
-        background-color: #f39c12;
-      }
-      .item5 {
-        background-color: #9b59b6;
-      }
-
-      .container {
-        background-color: red;
-        height: 100%;
-        width: 50%;
-      }
-
-      .mitra.container {
-        background-color: rgb(238, 245, 238);
-        height: 100%;
-        width: 50%;
-        border-radius: 15px;
-        text-align: left;
-        background-position: center;
-        background-size: cover;
-        box-shadow: var(--shadow2);
-      }
-      .shop-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 15px;
-      }
-      .text-container {
-        align-self: center;
-        margin: auto 0;
-        width: fit-content;
-        height: fit-content;
-        padding-left: 2rem;
-      }
-
-      .mitra .shop-name {
-        font-size: xx-large; /* Large */
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-        padding-top: 2rem;
-      }
-      .mitra .loc h2,
-      .mitra .contact-info h2,
-      .mitra .operational-hours h2,
-      .mitra .highlighted-products h2,
-      .mitra .available-products h2 {
-        font-size: 1.5rem; /* Larger */
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-      }
-
-      .mitra .loc,
-      .mitra .shop-contact,
-      .mitra .operational-time,
-      .mitra .unggulan,
-      .mitra .available-product {
-        font-size: 1rem; /* Medium */
-        color: #555;
-        margin-bottom: 1px;
-      }
-
-      .mitra .operational-time {
-        font-style: italic;
-      }
-
-      .mitra .unggulan {
-        font-size: 1.2rem; /* Large */
-        font-weight: bold;
-      }
-
-      .item1 {
-        background-color: #3498db;
-      }
-      .item2 {
-        background-color: #2ecc71;
-      }
-      .item3 {
-        background-color: #e74c3c;
-      }
-      .item4 {
-        background-color: #f39c12;
-      }
-      .item5 {
-        background-color: #9b59b6;
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .carousel-item {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .container {
-          width: 100%;
-          height: 50%;
-        }
-
-        .carousel-section {
-          width: 70%;
-          height: 600px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-        }
+      #decrement {
+        background-color: #f44336;
       }
     </style>
   </head>
   <body>
-    <section class="carousel-section">
-      <div class="carousel-container">
-        <button class="carousel-button prev" onclick="prevItem()">
-          <i class="bx bx-chevron-left"></i>
-        </button>
-        <div class="carousel-wrapper">
-          <div class="carousel-item item1">
-            <div class="container"></div>
-            <div class="container"></div>
-          </div>
-          <div class="carousel-item item2">
-            <div class="container"></div>
-            <div class="container"></div>
-          </div>
-          <div class="carousel-item item3">
-            <div class="container"></div>
-            <div class="container"></div>
-          </div>
-          <div class="carousel-item item4">
-            <div class="container"></div>
-            <div class="container"></div>
-          </div>
-        </div>
-        <button class="carousel-button next" onclick="nextItem()">
-          <i class="bx bx-chevron-right"></i>
-        </button>
+    <div class="counter-container">
+      <h1>Counter</h1>
+      <div>
+        <button id="decrement" class="button">-</button>
+        <span id="count">0</span>
+        <button id="increment" class="button">+</button>
       </div>
-    </section>
+    </div>
 
     <script>
-      let currentIndex = 0;
-      const items = document.querySelectorAll(".carousel-item");
-      const totalItems = items.length;
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.getElementById("decrement");
+        const incrementButton = document.getElementById("increment");
+        const countElement = document.getElementById("count");
+        let count = 0;
 
-      function showItem(index) {
-        const newPosition = -index * 100 + "%";
-        document.querySelector(
-          ".carousel-wrapper"
-        ).style.transform = `translateX(${newPosition})`;
-      }
+        decrementButton.addEventListener("click", function () {
+          count = Math.max(0, count - 1);
+          countElement.textContent = count;
+        });
 
-      function nextItem() {
-        currentIndex = (currentIndex + 1) % totalItems;
-        showItem(currentIndex);
-      }
-
-      function prevItem() {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        showItem(currentIndex);
-      }
+        incrementButton.addEventListener("click", function () {
+          count += 1;
+          countElement.textContent = count;
+        });
+      });
     </script>
   </body>
 </html>

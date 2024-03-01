@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="desktop-nav">
-      <h1 class="web-title"><a href="#">Plantopia</a></h1>
+      <h1 class="web-title"><a href="index.html">Plantopia</a></h1>
 
       <div class="search-container">
         <div class="search-box">
@@ -73,28 +73,28 @@
             <div class="display-photo-container">
               <img
                 class="display-photo"
-                src="image/category-tanaman-hias.jpg"
+                src="image/product-example.jpg"
                 alt="display photo"
               />
             </div>
             <div class="photo-collection">
               <a href="" class="other-photo"
-                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
               <a href="" class="other-photo"
-                ><img src="image/category-tanaman-hias.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
               <a href="" class="other-photo"
-                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
               <a href="" class="other-photo"
-                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
               <a href="" class="other-photo"
-                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
               <a href="" class="other-photo"
-                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+                ><img src="image/other-photo-product.jpg" alt="other-photo"
               /></a>
             </div>
           </div>
@@ -102,16 +102,35 @@
             <a href="#"><i class="bx bx-share-alt"></i></a>
             <a href="#"><i class="bx bxs-chat"></i></a>
             <a href="#"><i class="bx bxs-cart-alt"></i></a>
-            <a href="#"><i class="bx bx-heart"></i></a>
+            <a href="" class="heart-button" id="heartButton"
+              ><i class="bx bx-heart"></i
+            ></a>
           </div>
-          <div class="buy-container"></div>
+
+          <div class="buy-container">
+            <div class="counter-container">
+              <button id="decrement" class="button">-</button>
+              <span style="font-size: x-large; font-weight: bold" id="count"
+                >0</span
+              >
+              <button id="increment" class="button">+</button>
+            </div>
+            <button class="beli">
+              Beli <i class="bx bxs-shopping-bags"></i>
+            </button>
+          </div>
         </div>
+
         <div class="price-desc-section">
           <div class="price-desc-container">
-            <h1 class="title-product">TITLE PRODUCT</h1>
+            <h1 class="title-product">Neanthe Bella Palm</h1>
 
             <div class="star-tag-container">
-              <p class="star">⭐⭐⭐⭐⭐</p>
+              <p class="star">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </p>
               <p>100 Review</p>
 
               <div class="tags-box">
@@ -127,46 +146,116 @@
             </div>
 
             <div class="desc-container">
-              <h2 class="desc">desc</h2>
-              <p class="desc-content" style="text-align: justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, exercitationem doloribus perferendis temporibus
-                odio, quibusdam alias distinctio consectetur voluptas, impedit
-                nisi mollitia veritatis architecto culpa neque. Itaque esse rem
-                sequi quas eveniet vel, quia porro maiores asperiores, nesciunt
-                impedit laboriosam aperiam quae, commodi dolorem accusantium
-                dignissimos fugit. Aliquam exercitationem quasi expedita. Aut
-                velit cumque minima ad numquam nam repellat quos harum.
-                Perspiciatis soluta nobis consequatur ratione, similique
-                nesciunt eius? Animi provident facilis aliquam recusandae
-                molestias, quas error. Nesciunt ullam ducimus molestias fugiat
-                facere dolores aspernatur aut minima! Delectus esse animi ut
-                odit commodi enim temporibus inventore ab iure alias veniam
-                quaerat dolores, nam ex aliquid nobis, sapiente odio id. Dicta
-                ab ipsum quis laboriosam! Dolorem assumenda voluptate fugit, et
-                excepturi enim aspernatur nesciunt! Quam, dicta sit? Cupiditate
-                ipsam, sit a mollitia corporis nesciunt voluptas illo qui ex
-                inventore soluta, eaque fugit voluptatem iusto suscipit itaque
-                illum labore corrupti sed ab. Quasi, modi aliquam? Distinctio
-                quo voluptas eum eaque? Reiciendis, voluptatibus? Quibusdam
-                nobis commodi eos hic, molestiae repellat. Ab harum illum
-                minima, delectus distinctio eos nesciunt quasi numquam officiis
-                sunt sequi ex dicta cumque ipsam itaque sapiente corrupti neque,
-                dolorem perferendis nam recusandae qui quae rem iure. Recusandae
-                quisquam est obcaecati.
-              </p>
+              <h2 class="desc">Deskripsi</h2>
+              <div class="desc-content" style="text-align: justify">
+                <p>
+                  <strong>Nama Produk:</strong> Neanthe Bella Palm (Chamaedorea
+                  elegans)
+                </p>
+
+                <p>
+                  Selamatkan keindahan alam di dalam rumah Anda dengan Neanthe
+                  Bella Palm, tanaman hias yang memukau dan menambah sentuhan
+                  hijau segar ke setiap sudut ruangan. Dikenal juga dengan nama
+                  Chamaedorea elegans atau Parlor Palm, tanaman ini adalah
+                  pilihan sempurna untuk menciptakan atmosfer yang nyaman dan
+                  menenangkan di rumah Anda.
+                </p>
+
+                <br />
+
+                <p><strong>Deskripsi:</strong></p>
+
+                <p>
+                  Neanthe Bella Palm adalah pilihan yang ideal untuk mereka yang
+                  mencari tanaman hias yang tidak hanya indah tetapi juga mudah
+                  perawatannya. Dengan frond lembut dan daun hijau gelap yang
+                  anggun, tanaman ini membawa nuansa tropis ke dalam ruangan
+                  Anda, memberikan sentuhan eksotis yang begitu dinantikan.
+                </p>
+
+                <br />
+
+                <p><strong>Keunggulan:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Kecantikan Serba Guna:</strong> Dengan penampilan
+                    yang elegan dan serba guna, Neanthe Bella Palm cocok
+                    ditempatkan di berbagai ruangan seperti ruang tamu, kamar
+                    tidur, atau kantor Anda.
+                  </li>
+                  <li>
+                    <strong>Pemeliharaan yang Mudah:</strong> Tanaman ini
+                    merupakan pilihan sempurna untuk pemula atau mereka yang
+                    memiliki jadwal yang sibuk. Neanthe Bella Palm dapat tumbuh
+                    dengan baik di kondisi cahaya yang rendah hingga sedang dan
+                    membutuhkan sedikit perawatan.
+                  </li>
+                  <li>
+                    <strong>Pembersih Udara Alami:</strong> Neanthe Bella Palm
+                    membantu menyaring udara di sekitarnya, menghilangkan
+                    beberapa polutan dan memberikan udara yang lebih segar di
+                    dalam rumah.
+                  </li>
+                  <li>
+                    <strong>Daya Tahan yang Baik:</strong> Tanaman ini tahan
+                    terhadap berbagai kondisi lingkungan dan dapat bertahan
+                    dalam keadaan kurang air sekalipun.
+                  </li>
+                </ul>
+
+                <br />
+
+                <p><strong>Cara Perawatan:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Pencahayaan:</strong> Tempatkan tanaman ini di
+                    tempat yang mendapatkan cahaya indirek, hindari sinar
+                    matahari langsung yang berlebihan.
+                  </li>
+                  <li>
+                    <strong>Penyiraman:</strong> Siram tanah secara teratur,
+                    pastikan tanah tetap lembab tetapi tidak terlalu basah.
+                  </li>
+                  <li>
+                    <strong>Pemupukan:</strong> Berikan pupuk seimbang setiap
+                    bulan selama musim tumbuh.
+                  </li>
+                  <li>
+                    <strong>Kelembaban:</strong> Tingkat kelembaban yang cukup
+                    membantu tanaman tetap sehat. Semprotkan air ke daun secara
+                    periodik jika lingkungan terlalu kering.
+                  </li>
+                </ul>
+
+                <br />
+
+                <p>
+                  <strong
+                    >Bawa keajaiban alam ke dalam rumah Anda dengan Neanthe
+                    Bella Palm. Jadikan rumah Anda tempat yang lebih hijau,
+                    damai, dan penuh keindahan dengan sentuhan eksotis tanaman
+                    hias ini. Segera miliki Neanthe Bella Palm dan nikmati
+                    pesona kehidupan tropis di rumah Anda!</strong
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="rating-section">
-        <h1 class="review-title">RATING AND REVIEW</h1>
+        <h1 class="review-title">Ulasan</h1>
         <!-- ==================================== -->
         <div class="user-rating-main-container">
           <!-- =====USER REVIEW======= -->
           <div class="user-review-container">
-            <h1 class="star-user">⭐⭐⭐⭐⭐</h1>
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
 
             <div class="name-profile-container">
               <div class="profile"></div>
@@ -193,7 +282,11 @@
         <div class="user-rating-main-container">
           <!-- =====USER REVIEW======= -->
           <div class="user-review-container">
-            <h1 class="star-user">⭐⭐⭐⭐⭐</h1>
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
             <div class="name-profile-container">
               <div class="profile"></div>
               <h2 class="name">Username</h2>
@@ -219,7 +312,11 @@
         <div class="user-rating-main-container">
           <!-- =====USER REVIEW======= -->
           <div class="user-review-container">
-            <h1 class="star-user">⭐⭐⭐⭐⭐</h1>
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
             <div class="name-profile-container">
               <div class="profile"></div>
               <h2 class="name">Username</h2>
@@ -245,7 +342,11 @@
         <div class="user-rating-main-container">
           <!-- =====USER REVIEW======= -->
           <div class="user-review-container">
-            <h1 class="star-user">⭐⭐⭐⭐⭐</h1>
+            <h1 class="star-user">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+              ><i class="bx bxs-star"></i>
+            </h1>
             <div class="name-profile-container">
               <div class="profile"></div>
               <h2 class="name">Username</h2>
@@ -280,6 +381,41 @@
         "--screen-width",
         screenWidth + "px"
       );
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.getElementById("decrement");
+        const incrementButton = document.getElementById("increment");
+        const countElement = document.getElementById("count");
+        let count = 0;
+
+        decrementButton.addEventListener("click", function () {
+          count = Math.max(0, count - 1);
+          countElement.textContent = count;
+        });
+
+        incrementButton.addEventListener("click", function () {
+          count += 1;
+          countElement.textContent = count;
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const heartButton = document.getElementById("heartButton");
+
+        heartButton.addEventListener("click", function () {
+          heartButton.classList.toggle("liked");
+          event.preventDefault();
+          if (heartButton.classList.contains("liked")) {
+            // Jika tombol hati (heart) diklik, ganti ikon dengan yang kedua
+            heartButton.innerHTML = "<i class='bx bxs-heart'></i>";
+            heartButton.style.color = "#ee4562";
+          } else {
+            // Jika tombol hati (heart) diklik lagi, kembalikan ke ikon yang pertama
+            heartButton.innerHTML = "<i class='bx bx-heart'></i>";
+            heartButton.style.color = "white";
+          }
+        });
+      });
     </script>
   </body>
 </html>

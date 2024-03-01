@@ -42,3 +42,28 @@ function changeTitle(title) {
     activeLink.parentElement.classList.add("active");
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const decrementButton = document.getElementById("decrement");
+  const incrementButton = document.getElementById("increment");
+  const countElement = document.getElementById("count");
+  let count = 0;
+
+  decrementButton.addEventListener("click", function () {
+    count = Math.max(0, count - 1);
+    countElement.textContent = count;
+  });
+
+  incrementButton.addEventListener("click", function () {
+    count += 1;
+    countElement.textContent = count;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heartButton = document.getElementById("heartButton");
+
+  heartButton.addEventListener("click", function () {
+    heartButton.style.color = "red";
+  });
+});
