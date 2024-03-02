@@ -341,12 +341,10 @@ h2 {
     padding: 0;
     height: 70px;
     overflow-y: hidden;
-    transition: 0.5s all ease-in-out;
 
     & .text-container {
       margin: 1rem;
     }
-    transition: 0.5s all ease-in-out;
   }
 
   #payment-details.expanded {
@@ -412,6 +410,8 @@ h2 {
     background-color: #ddd;
     margin-right: 20px;
     border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
   }
 
   /* Style the text container for mobile */

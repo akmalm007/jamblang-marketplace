@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const productPrice1 = 180000;
 
   // Example product 2
-  const productName2 = "Monstera Deliciosa";
+  const productName2 = "Contoh Produk";
   const productPrice2 = 250000;
 
   // Example product 3
-  const productName3 = "Snake Plant";
-  const productPrice3 = 150000;
+  const productName3 = "Contoh Produk";
+  const productPrice3 = 100000;
 
   // Display example products in the first three product containers
   productContainers[0].querySelector(".product-name").innerText = productName1;
