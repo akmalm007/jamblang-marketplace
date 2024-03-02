@@ -101,7 +101,9 @@
           <div class="icon-container">
             <a href="#"><i class="bx bx-share-alt"></i></a>
             <a href="#"><i class="bx bxs-chat"></i></a>
-            <a href="#"><i class="bx bxs-cart-alt"></i></a>
+            <a href="#" class="cart-button" id="cartButton"
+              ><i class="bx bxs-cart-alt"></i
+            ></a>
             <a href="" class="heart-button" id="heartButton"
               ><i class="bx bx-heart"></i
             ></a>
@@ -148,23 +150,7 @@
             <div class="desc-container">
               <h2 class="desc">Deskripsi</h2>
               <div class="desc-content" style="text-align: justify">
-                <p>
-                  <strong>Nama Produk:</strong> Neanthe Bella Palm (Chamaedorea
-                  elegans)
-                </p>
-
-                <p>
-                  Selamatkan keindahan alam di dalam rumah Anda dengan Neanthe
-                  Bella Palm, tanaman hias yang memukau dan menambah sentuhan
-                  hijau segar ke setiap sudut ruangan. Dikenal juga dengan nama
-                  Chamaedorea elegans atau Parlor Palm, tanaman ini adalah
-                  pilihan sempurna untuk menciptakan atmosfer yang nyaman dan
-                  menenangkan di rumah Anda.
-                </p>
-
-                <br />
-
-                <p><strong>Deskripsi:</strong></p>
+                <p></p>
 
                 <p>
                   Neanthe Bella Palm adalah pilihan yang ideal untuk mereka yang
@@ -401,6 +387,7 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         const heartButton = document.getElementById("heartButton");
+        const cartButton = document.getElementById("cartButton");
 
         heartButton.addEventListener("click", function () {
           heartButton.classList.toggle("liked");
@@ -412,7 +399,17 @@
           } else {
             // Jika tombol hati (heart) diklik lagi, kembalikan ke ikon yang pertama
             heartButton.innerHTML = "<i class='bx bx-heart'></i>";
-            heartButton.style.color = "white";
+            heartButton.style.color = "var(--text)";
+          }
+        });
+
+        cartButton.addEventListener("click", function () {
+          cartButton.classList.toggle("liked");
+          event.preventDefault();
+          if (cartButton.classList.contains("liked")) {
+            cartButton.style.color = "var(--primary)";
+          } else {
+            cartButton.style.color = "var(--text)";
           }
         });
       });

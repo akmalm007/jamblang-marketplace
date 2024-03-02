@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/cartStyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 style="width: 80%; margin: 1rem auto">Keranjangmu</h1>
+    <div class="container">
+      <div id="product-details">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Product 1 -->
+            <!-- Product 1 -->
+            <tr class="product-row" data-id="1" data-price="10000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/product-example.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Neanthe Bella Palm</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 180.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+            <!-- Product 2 -->
+            <tr class="product-row" data-id="2" data-price="25000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/other-photo-product.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Contoh Produk</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 250.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+            <!-- Product 3 -->
+            <tr class="product-row" data-id="3" data-price="50000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/other-photo-product.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Contoh Produk</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 100.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="" class="continue-button">
+          lanjut berbelanja? <i class="bx bxs-shopping-bags"></i
+        ></a>
+      </div>
+
+      <!-- Right Section - Payment Details -->
+      <div id="payment-details">
+        <div class="text-container">
+          <h2>Payment Details</h2>
+          <div id="product-summary"></div>
+          <div id="subtotal">Subtotal: Rp 0</div>
+          <div id="shipping">Shipping: Rp 5</div>
+          <div id="tax">Tax: Rp 2</div>
+          <div id="total">Total: Rp 0</div>
+          <button id="buy-button">
+            Atur Pesanan <i class="bx bx-credit-card icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" id="back-button" onclick="goBack()">
+      <i class="bx bx-chevron-left icon"></i>
+    </a>
+
+    <script>
+      // Mendapatkan lebar layar pengguna
+      var screenWidth = window.screen.width;
+
+      // Menyimpan lebar layar dalam variabel CSS
+      document.documentElement.style.setProperty(
+        "--screen-width",
+        screenWidth + "px"
+      );
+
+      const products = [
+        { id: 1, name: "Neanthe Bella Palm", price: 180000 },
+        { id: 2, name: "Lily Plant", price: 250000 },
+        { id: 3, name: "Orchid Plant", price: 100000 },
+      ];
+
+      function formatRupiah(amount) {
+        return new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        }).format(amount);
+      }
+
+      function updateProductDetails(productId, count) {
+        const totalElement = document.querySelector(
+          `.product-row[data-id="${productId}"] .total-price`
+        );
+        const product = products.find((product) => product.id === productId);
+        const totalPrice = product.price * count;
+        totalElement.textContent = `${formatRupiah(totalPrice)}`;
+
+        updatePaymentDetails();
+      }
+
+      function updatePaymentDetails() {
+        const productSummaryElement =
+          document.getElementById("product-summary");
+        const subtotalElement = document.getElementById("subtotal");
+        const shippingElement = document.getElementById("shipping");
+        const taxElement = document.getElementById("tax");
+        const totalElement = document.getElementById("total");
+
+        let productSummaryHTML = "";
+        let subtotal = 0;
+
+        products.forEach((product) => {
+          const countElement = document.querySelector(
+            `.product-row[data-id="${product.id}"] .count`
+          );
+          const count = parseInt(countElement.textContent);
+
+          if (count > 0) {
+            const productTotal = product.price * count;
+            subtotal += productTotal;
+            productSummaryHTML += `<div>${
+              product.name
+            } x ${count} = ${formatRupiah(productTotal)}</div>`;
+          }
+        });
+
+        productSummaryElement.innerHTML = productSummaryHTML;
+
+        const shippingCost = 5000; // Assume flat shipping cost
+        const taxRate = 0.1; // 10% tax rate
+        const shipping = subtotal > 0 ? shippingCost : 0;
+        const taxAmount = subtotal > 0 ? subtotal * taxRate : 0;
+        const total = subtotal + shipping + taxAmount;
+
+        subtotalElement.textContent = `Subtotal: ${formatRupiah(subtotal)}`;
+        shippingElement.textContent = `Shipping: ${formatRupiah(shipping)}`;
+        taxElement.textContent = `Tax: ${formatRupiah(taxAmount.toFixed(2))}`;
+        totalElement.textContent = ` ${formatRupiah(total.toFixed(2))}`;
+      }
+
+      products.forEach((product) => {
+        const productElement = document.querySelector(
+          `.product-row[data-id="${product.id}"]`
+        );
+        const incrementButton = productElement.querySelector(".increment");
+        const decrementButton = productElement.querySelector(".decrement");
+        const deleteButton = productElement.querySelector(".delete-button");
+
+        let count = 0;
+
+        incrementButton.addEventListener("click", () => {
+          count++;
+          productElement.querySelector(".count").textContent = count;
+          updateProductDetails(product.id, count);
+        });
+
+        decrementButton.addEventListener("click", () => {
+          if (count > 0) {
+            count--;
+            productElement.querySelector(".count").textContent = count;
+            updateProductDetails(product.id, count);
+          }
+        });
+
+        deleteButton.addEventListener("click", () => {
+          deleteProduct(product.id);
+        });
+      });
+
+      document.getElementById("buy-button").addEventListener("click", () => {
+        alert("Purchase Successful!");
+      });
+
+      function deleteProduct(productId) {
+        const productElement = document.querySelector(
+          `.product-row[data-id="${productId}"]`
+        );
+        productElement.remove();
+        updatePaymentDetails();
+      }
+    </script>
+  </body>
+</html>
