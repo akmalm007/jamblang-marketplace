@@ -18,8 +18,8 @@ Penjelasan kode yang dibuat menggunakan HTML dan CSS.
 setiap bagian pada halaman landing page dibagi dengan tag <section> lalu pada tampilan utama dibungkus dengan container
 kemudian di dalamnya terdapat container lagi yang memuat dua buah container yaitu:
 
-- <div class="container1"> yang berisi pengenalan tentang website dan halaman login jika pengunjung ingin mendaftarkan data diri
-- <div class="container2"> yang berisi sosial media yang bisa dikunjungin oleh pengunjung untuk melihat konten yang ada pada website
+- `<div class="container1">` yang berisi pengenalan tentang website dan halaman login jika pengunjung ingin mendaftarkan data diri
+- `<div class="container2">` yang berisi sosial media yang bisa dikunjungin oleh pengunjung untuk melihat konten yang ada pada website
 
 ```html
       <section class="landing-page">
@@ -120,10 +120,96 @@ Di bagiann tampilan utama setiap div diberi stylenya masing masing seperti berik
   font-size: 50px;
   font-weight: 600;
 }
-
-
 ```
 
+### Detail Product
+Berisi halam yang menjelaskan detail dari produk yang dipasarkan di website 
 
+Pada blok kode ini dibuat container yang akan container contaier lain yang menyimpan gambar, button, serta detial dari tanaman
+```html
+      <section class="detail-product-section">
+        <div class="photos-main-container">
+          <div class="photo-container">
+            <div class="display-photo-container">
+              <img
+                class="display-photo"
+                src="image/category-tanaman-hias.jpg"
+                alt="display photo"
+              />
+            </div>
+            <div class="photo-collection">
+              <a href="" class="other-photo"
+                ><img src="image/category-buah-sayur.jpg" alt="other-photo"
+              /></a>
+            </div>
+          </div>
+          <div class="icon-container">
+            <a href="#"><i class="bx bx-share-alt"></i></a>
+          </div>
+          <div class="buy-container"></div>
+        </div>
+        <div class="price-desc-section">
+          <div class="price-desc-container">
+            <h1 class="title-product">TITLE PRODUCT</h1>
 
+            <div class="star-tag-container">
+              <p class="star">⭐⭐⭐⭐⭐</p>
+              <p>100 Review</p>
 
+              <div class="tags-box">
+                <p><i class="bx bxs-purchase-tag"></i></p>
+                <p>Tanaman hias</p>
+              </div>
+            </div>
+
+            <div class="price-container">
+              <h2 class="price">Rp 180.000</h2>
+
+              <h4 class="before-discount-price">Rp 200.000</h4>
+            </div>
+
+            <div class="desc-container">
+              <h2 class="desc">desc</h2>
+              <p class="desc-cotent">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+```
+#### Styling dari Detail Product
+styling yang ada bagian ini ada 3 bagian utama yaitu:
+
+- `.detail-product-section` yang akan menampung dua container utama yaitu deskrpsi dari produk seperti title, harga, dan detail product
+- `.photos-main-container` kelas ini akan menampung foto utama yang ada di halaman detail produk, lalu ada lagi kelas tambahan
+yang akan menampilkan foto foto kecil produk secara vertical dengan `flex-direction: column`.
+- `.price-desc-container ` kelas yang akan menyimpan teks dan review yang ada dalam produk untuk mengatur isinya menggunakan margin dan padding untuk mengatur spacing antar container 
+
+```css
+.detail-product-section {
+  margin-bottom: 5rem;
+  display: flex;
+  padding-top: 5vh;
+  width: 100%;
+  height: fit-content;
+}
+
+.photos-main-container {
+  width: 50%;
+  height: fit-content;
+  margin: 0 auto;
+  position: sticky;
+  top: 4rem;
+}
+.price-desc-container {
+  box-shadow: var(--shadow);
+  width: auto;
+  height: 100%;
+  background-color: var(--secondary);
+  margin: 0 1rem;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--accent);
+}
+```
