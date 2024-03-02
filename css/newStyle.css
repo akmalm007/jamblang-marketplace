@@ -322,7 +322,7 @@ input[type="search"] {
   margin: auto;
   padding: 2rem;
   text-align: center;
-  background: rgba(213, 241, 236, 0.3);
+  background: rgba(56, 114, 82, 0.582);
   border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.9px);
@@ -335,11 +335,12 @@ input[type="search"] {
     font-weight: 700;
     color: var(--card);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--secondary-color);
+    /* -webkit-text-stroke-color: var(--); */
   }
 
   & p {
     font-size: medium;
+    color: var(--card);
   }
 }
 .login-container {
@@ -640,6 +641,24 @@ h2 {
   border-radius: 5px;
   padding: 10px;
   box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  background-image: url(../image/daunbg.jpg);
+  background-position: center;
+  background-size: cover;
+
+  & h1 {
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    width: 70%;
+    height: fit-content;
+    padding: 1rem;
+    color: var(--background);
+    border-radius: 5px;
+    border: 2px solid var(--background);
+  }
 }
 
 .discount-product-section {
@@ -792,7 +811,7 @@ h2 {
   width: 350px;
   height: 500px;
   background-color: var(--card);
-
+  border-radius: 5px;
   border: 1px solid #ddd;
 
   /* padding: 10px; */
@@ -1239,9 +1258,10 @@ li a {
   }
 
   .discount-title-mobile {
-    width: 200px;
+    width: 250px;
     height: 100%;
     display: flex;
+    border: 2px solid var(--secondary-color);
     align-items: center;
     font-family: "Montserrat";
     background-size: cover;
@@ -1254,6 +1274,10 @@ li a {
       display: initial;
       font-weight: 800;
       padding: 1rem;
+      margin: 2rem;
+      border-radius: 5px;
+      text-align: right;
+      font-size: 28pt;
     }
   }
 
@@ -1262,6 +1286,7 @@ li a {
     align-items: center;
     display: flex;
     gap: 30px;
+    padding: 0;
     border-radius: 5px;
     word-wrap: break-word;
     /* Memberikan sudut melengkung pada daftar produk */
