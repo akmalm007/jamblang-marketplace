@@ -58,6 +58,33 @@
         </div>
       </nav>
 
+      <!-- CHAT BOX -->
+
+      <section class="chat-section" id="chatSection" style="display: none">
+        <div class="chat-box" id="chatBox">
+          <div class="header">
+            <button id="closeChat">
+              <i class="bx bx-chevron-left icon"></i>
+            </button>
+            <h2>Chat</h2>
+          </div>
+          <div class="user-info">
+            <div class="profile-picture"><i class="bx bxs-user"></i></div>
+            <p>Nama Admin</p>
+          </div>
+          <div class="chat-content" id="chatContent">
+            <!-- Chat bubbles will be appended here -->
+          </div>
+          <div class="input-area">
+            <button>
+              <h1><i class="bx bxs-image-alt icon"></i></h1>
+            </button>
+            <input type="text" placeholder="Ketik pesan..." />
+            <button id="sendText"><i class="bx bxs-send icon"></i></button>
+          </div>
+        </div>
+      </section>
+      <!-- CHAT BOX END -->
       <!-- MOBILE NAVBAR END -->
 
       <section class="detail-product-section">
@@ -443,6 +470,38 @@
             cartButton.style.color = "var(--text)";
           }
         });
+      });
+
+      // untuk chat
+      const openChatButton = document.getElementById("openChat");
+      const closeChatButton = document.getElementById("closeChat");
+      const chatBox = document.getElementById("chatSection");
+      const chatContent = document.getElementById("chatContent");
+
+      const fileInput = document.getElementById("fileInput");
+
+      openChatButton.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+      <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+      <div class="message user">Tentu! Bagaimana cara memesan?</div>
+      <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+    `;
+      });
+
+      closeChatButton.addEventListener("click", () => {
+        chatBox.style.display = "none";
+      });
+
+      const openChatButtonMobile = document.getElementById("openChatMobile");
+
+      openChatButtonMobile.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+    <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+    <div class="message user">Tentu! Bagaimana cara memesan?</div>
+    <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+  `;
       });
     </script>
   </body>
