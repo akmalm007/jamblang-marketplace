@@ -1,94 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Maven+Pro:wght@400..900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #4b756a #dcebe0;
 }
 
 :root {
-  --background: rgb(241, 247, 243);
-  --primary: #bfe8c9;
-  --primary-opacity: rgba(87, 96, 90, 0.5);
-
-  --secondary: #93d297;
-  --secondary-opacity: rgba(147, 210, 151, 0.25);
-
-  --accent: #358265;
-  --accent-opacity: rgba(53, 130, 101, 0.25);
-
-  --background: #f2f8f7;
-  --background-opacity: rgba(242, 248, 247, 0.5);
-
-  --text: #050a06;
-  --text-opacity: rgba(5, 10, 6, 0.5);
-
-  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  --shadow2: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --green: rgb(101, 167, 147);
+  --primary-color: rgb(118, 221, 164);
+  --secondary-color: rgb(75, 117, 96);
+  --tertiary-color: #9cceaf;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-::-webkit-scrollbar {
-  width: 11px;
-  height: 11px;
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b756a #dcebe0;
 }
 
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #dcebe0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #4f7740;
-  border: 0px none #ffffff;
-  border-radius: 100px;
+*::-webkit-scrollbar-track:hover {
+  background-color: #eeffef;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #58d336;
+*::-webkit-scrollbar-track:active {
+  background-color: #b6e1cb;
 }
 
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4b756a;
 }
 
-::-webkit-scrollbar-track {
-  background: #bababa;
-  border: 0px none #ffffff;
-  border-radius: 13px;
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #83a376;
 }
 
-::-webkit-scrollbar-track:hover {
-  background: #afacac;
-}
-
-::-webkit-scrollbar-track:active {
-  background: #333333;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent;
+*::-webkit-scrollbar-thumb:active {
+  background-color: #75a374;
 }
 
 body {
   background-color: var(--background);
   width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.text a {
-  text-decoration: none;
-  color: #333;
-  list-style: none;
+  color: var(--text);
 }
 
 .box {
-  border-radius: 10px;
+  border-radius: 5px;
 }
+
+/* CHAT AREA */
+
+.chat-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 999;
+  padding: 1rem;
+  border: 5px;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--card);
+
+  & .icon {
+    font-size: xx-large;
+  }
+}
+
+.header button {
+  float: left;
+  padding: 0 1rem;
+}
+
+.user-info {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--tertiary-color);
+
+  padding: 1rem 0;
+  & p {
+    font-size: large;
+    font-weight: 600;
+    width: fit-content;
+  }
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat-section {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(13, 19, 11, 0.678);
+  backdrop-filter: blur(8px);
+  display: none;
+
+  & button,
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  & button {
+    cursor: pointer;
+  }
+
+  & button .icon {
+    font-size: x-large;
+  }
+}
+.chat-content {
+  margin-bottom: calc(1rem + 40px);
+  height: 100%;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border: 5px;
+}
+
+.input-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  background-color: var(--secondary-color);
+}
+
+.input-area input {
+  background-color: white;
+  padding: 5px;
+  margin-right: 5px;
+  width: 100%;
+  height: fit-content;
+  align-self: center;
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+.input-area button {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Text bubble styling */
+.message {
+  max-width: 70%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #7be6a1;
+  color: #fff;
+}
+
+.message.admin {
+  align-self: flex-start;
+  background-color: #3498db;
+  color: #fff;
+}
+
+/*CHAT AREA END */
 
 .main-content {
   max-width: var(--screen-width);
@@ -97,25 +226,40 @@ a {
 
 .desktop-nav {
   box-shadow: var(--shadow);
-  border: 2px solid rgb(153, 201, 185);
+
   visibility: visible;
   display: flex;
-  background-color: rgba(184, 231, 213, 0.769);
-  backdrop-filter: blur(10px);
+  /* From https://css.glass */
+  background: rgba(143, 230, 179, 0.64);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(91, 235, 175, 0.66);
+  /* effect */
   height: fit-content;
   width: 100%;
-  padding: 2px 0;
   z-index: 1000;
-  margin: 5px 5px;
+  padding: 5px 0;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  border-radius: 10px;
+
+  & h1 {
+    font-size: x-large;
+  }
 }
 
 .nav-links {
-  font-size: x-large;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & a {
+    color: var(--secondary-color);
+    font-size: x-large;
+  }
 }
 
 .mobile-nav {
@@ -126,51 +270,84 @@ a {
   visibility: hidden;
   display: none;
 }
-
-/* Inline #2 | http://127.0.0.1:5500/index.html */
+.search-container {
+  width: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 5rem;
+}
 
 .search-box {
-  width: 400px;
   display: flex;
-  height: 35px;
+  width: 100%;
+  background: var(--background);
+  padding: 5px;
 }
 
 .search-button {
-  height: auto;
-  width: fit-content;
-  padding: 0 1rem;
-  outline: none;
+  color: var(--secondary-color);
   border: none;
+  cursor: pointer;
+  object-position: center;
+  background-color: var(--background);
+  text-align: center;
+  margin: 3px 10px 0;
 }
 
-input {
-  list-style: none;
-  outline: none;
-  border: none;
-  width: 100%;
+.search-icon {
+  font-size: 20px; /* Ganti ukuran ikon sesuai kebutuhan */
 }
+
+input[type="search"] {
+  width: 100%;
+  padding: 2pxx;
+  border: none;
+  outline: none;
+  background-color: var(--body);
+  border-bottom: 2px solid rgb(22, 102, 68);
+}
+
+/* Styling tambahan sesuai kebutuhan */
+
+/* Styling tambahan sesuai kebutuhan */
 
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
+  color: var(--secondary-color);
+
+  & a {
+    font-family: "Maven Pro";
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
 }
 
 .user-box {
   width: fit-content;
   height: fit-content;
-  padding: 2px 10px;
-  border-radius: 20px;
-  background-color: #eeeced;
+  border-radius: 5px;
+  background-color: var(--background);
   display: inline-flex;
   align-items: center;
+  padding-left: 1rem;
+
+  & p {
+    margin-right: 1rem;
+  }
 }
 
 .user-profile {
-  background-color: red;
+  background-color: var(--secondary-color);
   height: 35px;
   width: 35px;
-  border-radius: 50%;
+  border-radius: 5px;
   margin-left: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
 }
 
 /* landing page section start */
@@ -181,18 +358,16 @@ input {
 
 /*  =====LANDING PAGE KEDUA */
 
-/* newStyle.css | http://127.0.0.1:5500/css/newStyle.css */
-
 .landing-page {
-  background-color: rgb(232, 239, 237);
+  background-color: var(--body);
   height: 600px;
   box-shadow: var(--shadow);
   display: flex;
-  width: 95%;
-  margin: 0 auto;
-  margin-top: 6vh;
+  width: 100%;
+  margin: 0 auto 15vh;
+  margin-top: 3vh;
   padding: 1rem 0;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .container1 {
@@ -200,22 +375,25 @@ input {
   background-image: url(../image/blurrygrd3.svg);
   background-position: center;
   width: 50%;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: var(--shadow);
   margin: 0 10px;
   height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .slogan {
   font-weight: normal;
   width: 500px;
+  font-size: large;
+  color: #515a58;
   word-wrap: break-word;
 }
 
 .landing-page-title {
-  font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 36pt;
 }
 
 .web-title-container {
@@ -229,6 +407,17 @@ input {
   width: 100%;
   height: 150px;
   padding: 1rem;
+  /* From https://css.glass */
+  background: rgba(213, 241, 236, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(213, 241, 236, 0.45);
+
+  & h5 {
+    font-weight: 500;
+  }
 }
 
 /* Element | http://127.0.0.1:5500/index.html */
@@ -240,13 +429,13 @@ input {
   width: 50%;
   height: 100%;
   margin: 0 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   background-image: url(../image/landingbg.jpg);
   background-size: cover;
   background-position-x: right;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
 }
 
 .title-landing-page {
@@ -254,8 +443,13 @@ input {
 }
 
 .stats-box {
-  background-color: #cdeee3c9;
-  backdrop-filter: blur(5px);
+  /* From https://css.glass */
+  background: rgba(213, 241, 236, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(213, 241, 236, 0.45);
   box-shadow: var(--shadow);
   width: 135px;
 }
@@ -266,9 +460,36 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
+.plantopia {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(107, 190, 125, 0.384);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(213, 241, 236, 0.45);
+
+  & h1 {
+    font-family: "Maven Pro";
+    font-size: 48pt;
+    font-weight: 800;
+    color: var(--background);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--secondary-color);
+  }
+
+  & p {
+    font-size: medium;
+    color: var(--background);
+  }
+}
 .login-container {
   margin-top: 1rem;
   /* display: flex; */
@@ -283,17 +504,20 @@ input {
   /* margin: 0 1rem; */
   outline: none;
 
-  border-radius: 50px;
+  border-radius: 5px;
   font-weight: bolder;
   font-family: inherit;
 }
 
 .login {
-  color: white;
   font-size: larger;
-  background: #9ccec2;
-  border: 2px solid hsl(166, 34%, 71%);
-  border-radius: 20px;
+  background: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .login,
@@ -308,12 +532,16 @@ input {
 }
 
 .socmed-box {
-  text-align: right;
   font-size: xx-large;
   width: fit-content;
-  background-color: #9ccec2;
-  padding: 5px;
-  border-radius: 10px;
+  /* padding: 5px 0; */
+  width: 500px;
+  margin: 0 auto;
+
+  color: inherit;
+  & a {
+    color: #3a6458;
+  }
 }
 
 .temukan {
@@ -322,17 +550,210 @@ input {
 
 .temukan,
 .socmed-box {
+  width: 500px;
   margin: 0 auto;
 }
 
 /* ======LANDING PAGE KEDUA END */
+
+/* ====OUR PRODUCT SECTION */
+
+/* Inline #2 | http://127.0.0.1:5500/index.html */
+
+.our-product-section {
+  height: 600px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  border: 2px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.our-product-container1 {
+  height: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.our-product-container2 {
+  height: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../image/daunbg.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+
+  & h1 {
+    font-size: x-large;
+    font-weight: 500;
+    color: white;
+    font-size: x-large;
+  }
+}
+
+.our-product-container3 {
+  height: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.image-content {
+  height: 49%;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+/* =======OUR PRODUCT SECTON END */
+
+/* =====MITRA SECTION */
+
+.carousel-section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-container {
+  width: 90%;
+  overflow: hidden;
+  height: 90%;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--background);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+/* Item colors for demonstration purposes */
+
+.mitra.container {
+  background-color: rgb(238, 247, 238);
+  height: 100%;
+  width: 50%;
+  border-radius: 5px;
+  text-align: left;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow2);
+}
+.shop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+.text-container {
+  align-self: center;
+  margin: auto 0;
+  width: fit-content;
+  height: fit-content;
+  padding-left: 2rem;
+}
+
+.mitra .shop-name {
+  font-size: xx-large; /* Large */
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-top: 2rem;
+}
+.mitra .loc h2,
+.mitra .contact-info h2,
+.mitra .operational-hours h2,
+.mitra .highlighted-products h2,
+.mitra .available-products h2 {
+  font-size: 1.5rem; /* Larger */
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.mitra .loc,
+.mitra .shop-contact,
+.mitra .operational-time,
+.mitra .unggulan,
+.mitra .available-product {
+  font-size: 1rem; /* Medium */
+  color: #555;
+  margin-bottom: 1px;
+}
+
+.mitra .operational-time {
+  font-style: italic;
+}
+
+.mitra .unggulan {
+  font-size: 1.2rem; /* Large */
+  font-weight: bold;
+}
+
+/* =====MITRA SECTION END */
+
 /* discount page  */
 .discount-section {
-  margin: 0 1%;
+  margin: 0 auto;
 }
 
 .discount-main-container {
-  width: 100%;
+  width: 95%;
   height: auto;
   overflow: hidden;
   margin: 0 auto;
@@ -342,7 +763,7 @@ input {
 }
 
 h2 {
-  color: #333;
+  color: var(--text) 3;
   font-size: 24px;
   margin: 20px 0;
 }
@@ -364,10 +785,27 @@ h2 {
   height: 150px;
   margin-right: 10px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  background-image: url(../image/daunbg.jpg);
+  background-position: center;
+  background-size: cover;
+
+  & h1 {
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+    width: 70%;
+    height: fit-content;
+    padding: 1rem;
+    color: var(--background);
+    border-radius: 5px;
+    border: 2px solid var(--background);
+  }
 }
 
 .discount-product-section {
@@ -379,22 +817,55 @@ h2 {
   max-width: 100vw;
   overflow-x: auto;
   display: inline-flex;
-  justify-content: center;
 }
 
 .discount-title {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 330px;
-  height: 360px;
+  background-image: url(../image/discount-title2.webp);
+  background-color: rgba(0, 0, 0, 0.349);
+  background-position: center;
+  background-size: cover;
   margin-right: 20px;
+
+  & h1 {
+    font-weight: 800;
+    color: #2b3b25;
+    margin: 1rem; /* Menghilangkan margin bawaan dari elemen h1 */
+    text-align: center;
+    font-size: xxx-large;
+    border: 2px solid black;
+  }
+}
+
+.discount-title-mobile {
+  width: 200px;
+  height: 100%;
+  display: none;
+
+  & img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  & h1 {
+    font-family: "Montserrat";
+    display: none;
+  }
 }
 
 .discount-product-list {
-  cursor: grab;
+  padding-right: 5vw;
+  padding: 2rem 0;
   max-width: 72vw;
   align-items: center;
   display: inline-flex;
-  border-radius: 10px;
+  border-radius: 5px;
+  gap: 10px;
   /* Memberikan sudut melengkung pada daftar produk */
   overflow: auto;
   /* Menghindari border-radius yang terlihat tidak rapi saat di-scroll */
@@ -403,55 +874,76 @@ h2 {
 }
 
 .product-card {
-  flex: 0 0 auto;
   /* width: 15vw; */
-  width: 180px;
-  height: 290px;
-  margin-right: 10px;
-  background-color: #fff;
+  width: 200px;
+  height: 300px;
+  background-color: var(--card);
   /* Warna latar belakang untuk kartu produk */
   border: 1px solid #ddd;
   /* Garis tepi kartu produk */
-  border-radius: 8px;
-  /* Memberikan sudut melengkung pada kartu produk */
+  border-radius: 5px; /* Memberikan sudut melengkung pada kartu produk */
   padding: 10px;
   /* Padding untuk memberikan ruang di sekitar konten dalam kartu */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Bayangan untuk efek ketinggian */
 }
 
-/* Inline #2 | http://127.0.0.1:5500/index.html */
+.product-card-link-container {
+  justify-self: center;
+  width: fit-content;
+  text-decoration: none;
+  justify-self: center;
+  color: inherit;
+}
 
 .product-image {
   width: 100%;
-  height: 120px;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
+  align-self: center;
+  object-position: center;
 }
 
 .product-title {
   width: 100%;
+  font-size: larger;
+  font-weight: 500;
   height: fit-content;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 
-fi .before-discount-price {
-  font-size: smaller;
-}
-
-.star {
-  /* position: av absolute; */
-  /* position: ab; */
-  margin-top: 19px;
+.product-price {
+  font-weight: 800;
+  font-size: x-large;
+  margin-top: 10px;
 }
 
 .before-discount-price {
+  font-size: smaller;
   color: gray;
   text-decoration: line-through;
 }
 
+.tag {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #9ccec2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
 /* Gaya untuk judul "Flash sale" */
 h2 {
-  color: #333;
+  color: var(--text) 3;
   /* Warna teks judul */
   font-size: 24px;
   /* Ukuran teks judul */
@@ -459,12 +951,53 @@ h2 {
   /* Ruang di bawah judul */
 }
 
+/* PRODUCT CARD KEDUA  */
+
+.card2 {
+  /* width: 15vw; */
+  width: 350px;
+  height: 500px;
+  background-color: var(--card);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+
+  /* padding: 10px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+.discount-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: rgb(250, 73, 73);
+  border-radius: 0 0 25px;
+}
+
+.heart-button {
+  position: absolute;
+  top: 10px;
+  left: 1rem;
+  font-size: xx-large;
+}
+.star {
+  font-size: small;
+  color: #ebc23e;
+  text-shadow: var(--shadow);
+}
+/* PRODUCT CARD KEDUA END  */
 /* discount page end */
 
 .category-section {
   width: 100%;
   height: auto;
   margin-top: 5vh;
+  scroll-margin: 10vh;
 }
 
 .main-container-category {
@@ -475,7 +1008,6 @@ h2 {
 }
 
 .header-category {
-  background-color: gray;
   width: 80%;
   margin: 0 auto;
 
@@ -490,10 +1022,11 @@ h2 {
 
 .header-image {
   width: 100%;
-  background-color: green;
+  background-color: var(--secondary-color);
   height: 100px;
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 li {
@@ -506,18 +1039,18 @@ li {
 }
 
 .category-nav-container {
-  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
   overflow-x: auto;
+  max-width: 100vw;
 }
 
 .category-nav-links {
-  margin-top: 2rem;
+  margin: 2rem 0;
   padding: 10px;
   white-space: nowrap;
   display: block !important;
   flex-wrap: nowrap;
-
-  overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -528,15 +1061,40 @@ li {
   font-size: larger;
 }
 
+.active {
+  background-color: var(--primary-color);
+  color: var(--text);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .category-product-container {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 100px 10px;
+  padding-bottom: 10vh;
 }
 
+.section-title {
+  font-weight: 500;
+  margin-top: 10vh;
+}
 /* for mobile */
 @media only screen and (max-width: 1024px) {
+  .main-content {
+    width: 100%;
+  }
+  .section-title {
+    font-size: larger;
+    text-align: center;
+  }
   * {
     margin: 0;
     padding: 0;
@@ -549,7 +1107,7 @@ li {
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: aquamarine;
+    background-color: var(--secondary-color);
     position: fixed;
     bottom: 0;
     display: flex;
@@ -557,6 +1115,7 @@ li {
     align-items: center;
     padding: 10px;
     color: white;
+    z-index: 100;
   }
 
   .nav-links-mobile {
@@ -565,6 +1124,10 @@ li {
     height: 50%;
     margin: 0 auto;
     justify-content: space-around;
+
+    & a {
+      color: inherit;
+    }
   }
 
   .web-title {
@@ -576,7 +1139,7 @@ li {
     width: 100%;
     height: 60px;
     position: fixed;
-    background-color: rebeccapurple;
+    background-color: var(--secondary-color);
     visibility: visible;
     display: flex;
     align-items: center;
@@ -593,6 +1156,7 @@ li {
     border-radius: 5px;
     overflow: hidden;
     width: 50%;
+    margin-left: 0;
     /* Lebar container pencarian */
   }
 
@@ -600,30 +1164,33 @@ li {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
   }
 
   input[type="search"] {
     border: none;
     outline: none;
     width: 100%;
+    background-color: white;
     padding: 10px;
     font-size: 16px;
-    color: #333;
+    color: var(--text) 3;
   }
 
   /* Icon pencarian */
   .search-icon {
     font-size: 24px;
-    color: rebeccapurple;
+    color: #65a793;
     margin-left: 10px;
   }
 
   .user-profile {
-    background-color: red;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    margin: 0 10px;
+    background-color: var(--secondary-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    margin: 0;
   }
 
   /* Hover effect pada tombol pencarian */
@@ -675,11 +1242,28 @@ li {
 
   .container2 {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     margin: 0;
 
-    margin-top: 6vh;
+    padding-top: 45vh;
     background-position-y: center;
+  }
+
+  .plantopia h1 {
+    font-size: xx-large;
+    -webkit-text-stroke-width: 0.5px;
+  }
+  .stats-box {
+    width: 100px;
+
+    & h1 {
+      font-size: large;
+    }
+
+    & h5 {
+      font-size: x-small;
+      text-align: center;
+    }
   }
 
   .socmed-box {
@@ -690,8 +1274,14 @@ li {
   }
 
   .temukan {
+    text-align: center;
     margin: 0 auto;
     float: unset;
+  }
+
+  .temukan,
+  .socmed-box {
+    width: fit-content;
   }
 
   .login-container {
@@ -699,10 +1289,104 @@ li {
     width: fit-content;
   }
 
+  /* ======= OUR PRODUCT SECTION */
+
+  .our-product-section {
+    flex-direction: column;
+    justify-content: center;
+    height: 79vh;
+  }
+
+  .our-product-container1 {
+    flex-direction: row;
+    height: 30%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .our-product-container2 {
+    height: 200px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .our-product-container3 {
+    flex-direction: row;
+    height: 30%;
+    width: 100%;
+    margin: 0;
+  }
+  .image-content {
+    width: 50%;
+    height: 100%;
+  }
+  /* ========OUR PRODUCT SECTION END  */
+
+  /* ========MITRA SECTION */
+
+  .mitra.container {
+    width: 100%;
+  }
+
+  .carousel-section {
+    margin: 5px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 0;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 10px;
+    overflow: auto;
+    margin: auto;
+  }
+
+  .mitra.container {
+    overflow: auto;
+  }
+
+  .mitra .shop-name {
+    font-size: larger; /* Large */
+    font-weight: bold;
+    color: var(--text) 3;
+    margin-bottom: 20px;
+  }
+
+  .mitra .loc h2,
+  .mitra .contact-info h2,
+  .mitra .operational-hours h2,
+  .mitra .highlighted-products h2,
+  .mitra .available-products h2 {
+    font-size: medium; /* Larger */
+    font-weight: bold;
+    color: var(--text) 3;
+    margin-bottom: 2px;
+    margin-top: 0;
+  }
+  .mitra .loc,
+  .mitra .shop-contact,
+  .mitra .operational-time,
+  .mitra .unggulan,
+  .mitra .available-product {
+    font-size: small; /* Medium */
+    color: #555;
+  }
+
+  /* ========MITRA SECTION END */
   /* discount page  */
 
   .discount-main-container {
     width: 100vw;
+    padding: 1rem;
   }
 
   .discount-box {
@@ -710,10 +1394,10 @@ li {
   }
 
   .discount-product-section {
-    height: fit-content;
+    height: 600px;
     max-width: 100vw;
-    white-space: nowrap;
-    background-color: green;
+    overflow-x: auto;
+    overflow-y: hidden;
     /* Warna latar belakang untuk bagian diskon */
   }
 
@@ -723,17 +1407,45 @@ li {
   }
 
   .discount-title {
-    background-color: red;
-    width: 1000px;
+    width: 500px;
+    background-image: url(../image/discount-title.webp);
+
     height: 40vh;
     margin-right: 0;
+    display: none;
+  }
+
+  .discount-title-mobile {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    border: 2px solid var(--secondary-color);
+    align-items: center;
+    font-family: "Montserrat";
+    background-size: cover;
+    background-image: url(../image/discount-title2.webp);
+
+    background-position: center;
+
+    & h1 {
+      font-family: "Montserrat";
+      display: initial;
+      font-weight: 800;
+      padding: 1rem;
+      margin: 2rem;
+      border-radius: 5px;
+      font-size: 28pt;
+    }
   }
 
   .discount-product-list {
-    max-width: fit-content;
+    max-width: 100%;
     align-items: center;
-    display: inline-flex;
-    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    border-radius: 5px;
+    word-wrap: break-word;
     /* Memberikan sudut melengkung pada daftar produk */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Bayangan untuk efek ketinggian */
@@ -743,8 +1455,8 @@ li {
 
   /* category page */
   .category-product-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 5px;
+    display: grid;
+    gap: 50px 0;
   }
 
   .nav-product-category-container {
@@ -752,15 +1464,53 @@ li {
   }
 
   .product-card {
-    width: 160px;
-    height: 240px;
+    width: 180px;
+    height: 260px;
     align-self: center;
     justify-self: center;
     margin: 0;
   }
+  .card2 {
+    width: 300px;
+    height: 470px;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .product-price {
+    font-size: x-large;
+    margin-top: 5px;
+  }
+
+  .product-image {
+    height: 290px;
+  }
+  .star {
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+  }
+  .product-title {
+    font-size: large;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  .chat-section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chat-box {
+    transform: scale(0.6) translate(-85%, -87%);
+    position: fixed; /* Gunakan fixed agar tetap di layar */ /* Posisikan di tengah horizontal */
+  }
+
   .landing-page {
     width: 100%;
     margin: 0 auto;
@@ -785,7 +1535,7 @@ li {
     margin: 0 auto;
     text-align: center;
     font-size: small;
-    width: 100%;
+    width: 90%;
     height: fit-content;
     word-wrap: break-word;
   }
@@ -793,5 +1543,29 @@ li {
   .container2 {
     width: 100%;
     height: 30vh;
+  }
+
+  /* MITRA SECTION */
+
+  .carousel-container {
+    height: 70vh;
+  }
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* MITRA SECTION END */
+  .card2 {
+    width: 300px;
+    margin: auto;
+    align-self: center;
+  }
+
+  .category-product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+    align-items: center;
   }
 }

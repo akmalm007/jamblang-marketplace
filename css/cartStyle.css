@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b756a #dcebe0;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #dcebe0;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #eeffef;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b6e1cb;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4b756a;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #83a376;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #75a374;
+}
+
+:root {
+  --green: rgb(101, 167, 147);
+  --primary: rgb(118, 221, 164);
+  --secondary: rgb(75, 117, 96);
+  --accent: #9cceaf;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.main-content {
+  margin: 0 auto;
+  width: var(--screen-width);
+}
+
+.container {
+  gap: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  height: 100%;
+  margin: 5rem auto 0;
+}
+
+.main-container-mobile {
+  display: none;
+}
+#product-details {
+  flex: 1;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Border bottom for each cell */
+}
+
+.product-table th {
+  border-bottom: 2px solid #ddd; /* Larger border bottom for header cells */
+}
+.product-table .product-price,
+.product-table .total-price {
+  width: 100px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.product-row:hover {
+  background-color: #f5f5f5;
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 5px;
+  margin-right: 10px;
+
+  & img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+#payment-details {
+  padding: 0 20px;
+  width: 30%;
+  background-color: var(--card);
+  border: 2px solid var(--accent);
+  height: 500px;
+  border-radius: 5px;
+}
+.expand-button {
+  display: none;
+}
+h2 {
+  margin-top: 0;
+}
+
+#product-summary {
+  margin-top: 10px;
+}
+
+#subtotal,
+#shipping,
+#tax,
+#total {
+  margin-top: 10px;
+}
+
+#buy-button {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 20px;
+  justify-content: center;
+  font-size: large;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+
+  & .icon {
+    font-size: x-large;
+    align-self: center;
+  }
+}
+
+#buy-button:hover {
+  background-color: #45a049;
+}
+
+#back-button {
+  color: black;
+  border: none;
+  font-size: xx-large;
+  cursor: pointer;
+  height: fit-content;
+
+  &.icon {
+    margin: auto;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+#back-button:hover {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  color: white;
+  height: fit-content;
+}
+
+.text-container {
+  height: fit-content;
+  width: 90%;
+  padding: rem;
+  margin: 5rem auto 0;
+  line-height: 2;
+}
+#product-summary,
+#subtotal,
+#shipping,
+#tax {
+  color: rgb(83, 83, 83);
+  border-bottom: 1px solid gray;
+  font-size: small;
+}
+
+#total {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.continue-button {
+  padding: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 600;
+  border-radius: 5px;
+  position: absolute;
+
+  bottom: 10%;
+  left: 5rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.increment,
+.decrement {
+  font-size: xx-large;
+  font-weight: bolder;
+  border: none;
+  padding: 5px 15px;
+  font-size: 20pt;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+/* Tombol Plus */
+.increment {
+  color: green;
+}
+
+/* Tombol Kurang */
+.decrement {
+  color: red;
+}
+
+.decrement:hover,
+.increment:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+/* Tombol Delete */
+.delete-button {
+  color: rgb(241, 90, 90);
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  font-size: medium;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.keranjang {
+  font-weight: 600;
+  font-size: x-large;
+  margin: auto 0;
+  height: 80%;
+}
+.back-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--card);
+  position: fixed;
+  top: 0;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .keranjang {
+    font-size: x-large;
+    width: 40px;
+    margin: 0;
+    width: 100%;
+  }
+
+  body {
+    max-height: 100vh;
+    overflow-x: hidden;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #payment-details {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    height: 70px;
+    overflow-y: hidden;
+
+    & .text-container {
+      margin: 1rem;
+    }
+  }
+
+  #payment-details.expanded {
+    height: fit-content; /* Set ukuran saat tombol ditekan */
+    max-height: none; /* Hilangkan maksimum ukuran */
+    transition: 0.5s all ease-in-out;
+  }
+
+  .expand-button {
+    display: initial;
+    position: absolute;
+    top: 11px;
+    right: 1rem;
+    font-size: 36pt;
+    font-weight: bolder;
+    background-color: transparent;
+    border: none;
+  }
+
+  .rotate-down {
+    transform: rotate(180deg);
+    top: 0;
+  }
+
+  .continue-button {
+    position: unset;
+    margin: auto;
+  }
+
+  #product-details {
+    display: none;
+  }
+
+  .main-container-mobile {
+    display: initial;
+  }
+
+  .product-details-section-mobile {
+    padding: 60px 0 0;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Style the product container for mobile */
+  .product-container {
+    background-color: #eeeced;
+    border: 1px solid var(--accent);
+    box-shadow: var(--shadow);
+    display: flex;
+    padding: 1rem;
+    border-radius: 5px;
+
+    align-items: center;
+  }
+
+  /* Style the product image for mobile */
+  .product-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Style the text container for mobile */
+  .text-container-mobile {
+  }
+
+  /* Style the product name and price for mobile */
+  .product-name {
+    font-size: medium;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 5px;
+  }
+
+  .product-price {
+    color: var(--text);
+    font-size: larger;
+  }
+
+  /* Style the counter and delete button for mobile */
+  .counter-delete {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 1rem;
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    padding: 0 5px;
+    & span,
+    button {
+      font-size: medium;
+      padding: 5px 4px;
+      margin: 0;
+    }
+  }
+
+  .count {
+    margin: 0 10px;
+  }
+
+  .delete-button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  /* Adjust the delete button icon for mobile */
+  .delete-button i {
+    font-size: 1.2em;
+  }
+}

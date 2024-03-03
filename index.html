@@ -12,29 +12,66 @@
   </head>
   <body>
     <nav class="desktop-nav">
-      <h1 class="web-title">Plantopia</h1>
+      <h1 class="web-title"><a href="#">Plantopia</a></h1>
 
-      <div class="search-box box">
-        <button class="search-button">
-          <i class="bx bx-search-alt-2 search-icon"></i>
-        </button>
-        <input type="search" name="" id="" />
+      <div class="search-container">
+        <div class="search-box">
+          <button class="search-button">
+            <i class="bx bx-search-alt-2 search-icon"></i>
+          </button>
+          <input type="search" name="" id="" />
+        </div>
       </div>
 
-      <div class="nav-links">
-        <i class="bx bxs-message-dots"></i>
-        <i class="bx bxs-cart-alt"></i>
-        <i class="bx bxs-heart"></i>
-      </div>
+      <div
+        class="feature-profile-container"
+        style="display: flex; align-items: center; gap: 2rem"
+      >
+        <div class="nav-links">
+          <a href="javascript:void(0);" id="openChat"
+            ><i class="bx bxs-message-dots"></i
+          ></a>
+          <a href="cartPage.html"><i class="bx bxs-cart-alt" md></i></a>
+          <a href=""> <i class="bx bxs-heart"></i> </a>
+        </div>
 
-      <div class="user-box">
-        <p>Username</p>
-        <div class="user-profile"></div>
+        <div class="user-box">
+          <p>Username</p>
+          <div class="user-profile"><i class="bx bxs-user"></i></div>
+        </div>
       </div>
     </nav>
 
-    <!-- FOR MOBILE NAV AND SEARCH BOX  -->
+    <!-- CHAT BOX -->
+
+    <section class="chat-section" id="chatSection">
+      <div class="chat-box" id="chatBox">
+        <div class="header">
+          <button id="closeChat">
+            <i class="bx bx-chevron-left icon"></i>
+          </button>
+          <h2>Chat</h2>
+        </div>
+        <div class="user-info">
+          <div class="profile-picture"><i class="bx bxs-user"></i></div>
+          <p>Nama Admin</p>
+        </div>
+        <div class="chat-content" id="chatContent">
+          <!-- Chat bubbles will be appended here -->
+        </div>
+        <div class="input-area">
+          <button>
+            <h1><i class="bx bxs-image-alt icon"></i></h1>
+          </button>
+          <input type="text" placeholder="Ketik pesan..." />
+          <button id="sendText"><i class="bx bxs-send icon"></i></button>
+        </div>
+      </div>
+    </section>
+    <!-- CHAT BOX END -->
+
     <main class="main-content">
+      <!-- FOR MOBILE NAV AND SEARCH BOX  -->
       <div class="search-box-mobile">
         <div class="search-container">
           <button class="search-button">
@@ -43,188 +80,465 @@
           <input type="search" name="" id="" />
         </div>
 
-        <div class="user-profile"></div>
+        <div class="user-box">
+          <p>Username</p>
+          <div class="user-profile"><i class="bx bxs-user"></i></div>
+        </div>
       </div>
 
       <nav class="mobile-nav">
         <div class="nav-links-mobile">
-          <i class="bx bxs-home bx-md"></i>
-          <i class="bx bxs-message-dots bx-md"></i>
-          <i class="bx bxs-cart-alt bx-md"></i>
+          <a href="#"><i class="bx bxs-home bx-md"></i></a>
+          <a href="javascript:void(0);" id="openChatMobile">
+            <i class="bx bxs-message-dots bx-md"></i>
+          </a>
+          <a href="cartPage.html"><i class="bx bxs-cart-alt bx-md"></i></a>
           <i class="bx bxs-heart bx-md"></i>
         </div>
       </nav>
-      <!-- FOR MOBILE NAV AND SEARCH BOX  -->
-
-      <!-- landing page section -->
-      <!-- <section class="landing-page">
-        <div class="container1">
-          <div class="box-content-main"></div>
-          <div class="box-container">
-            <div class="box-content-bottom"></div>
-            <div class="box-content-bottom"></div>
-          </div>
-        </div>
-
-        <div class="container2"></div>
-      </section> -->
       <section class="landing-page">
         <div class="container1">
           <div class="web-title-container">
-            <h1 class="landing-page-title
-                ">
-              Bawa Alam 
-              <br>
+            <h1 class="landing-page-title">
+              Bawa Alam
+              <br />
               Kerumah Anda
             </h1>
 
-            <h3 class="slogan">Temukan pilihan terbaik dan personalisasikan pengalaman berbelanja Anda dengan bergabung bersama kami.</h3>
-
+            <h3 class="slogan">
+              Temukan pilihan terbaik dan personalisasikan pengalaman berbelanja
+              Anda dengan bergabung bersama kami.
+            </h3>
 
             <div class="login-container">
-                <br>
-              <button class="login">Login</button/tton>
-              <br>
-              <br>
-              <h5 style="color: #333;">Belum punya akun? <strong style="color: rgb(42, 124, 93);">Daftar</strong></h5>
-            </div>
-
-            
-          </div>
-
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="container2">
-          <div class="stats-container">
-            <div class="stats-box">
-              <h5>Lorem, ipsum.</h5>
-              <h1>100RB+</h1>
-            </div>
-            <div class="stats-box">
-              <h5>Lorem, ipsum.</h5>
-              <h1>100RB+</h1>
-            </div>
-            <div class="stats-box">
-              <h5>Lorem, ipsum.</h5>
-              <h1>100RB+</h1>
+              <br />
+              <button class="login">
+                <a href="newLogin.html">Masuk</a>
+              </button>
+              <br />
+              <br />
+              <h5 style="color: #333; font-weight: 500">
+                Belum punya akun?
+                <strong style="color: rgb(42, 124, 93)"
+                  ><a
+                    href="newLogin.html"
+                    style="text-decoration: none; color: rgb(92, 128, 114)"
+                    >Daftar</a
+                  ></strong
+                >
+              </h5>
             </div>
           </div>
+
           <p class="temukan">Temukan kami di:</p>
 
           <div class="socmed-box">
-            <a href="" class="socmed-icon"><i class='bx bxl-youtube' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-twitter' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-instagram-alt' ></i></a>
-            <a href="" class="socmed-icon"><i class='bx bxl-facebook-square'></i></a>
+            <a href="" class="socmed-icon"><i class="bx bxl-youtube"></i></a>
+            <a href="" class="socmed-icon"><i class="bx bxl-twitter"></i></a>
+            <a href="" class="socmed-icon"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a href="" class="socmed-icon"
+              ><i class="bx bxl-facebook-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="container2">
+          <div class="plantopia">
+            <h1>Plantopia</h1>
+            <p>Hijaukan Rumah Anda</p>
+          </div>
+
+          <div class="stats-container">
+            <div class="stats-box">
+              <h1>350.000+</h1>
+              <h5>Pengguna</h5>
+            </div>
+            <div class="stats-box">
+              <h1>10.000+</h1>
+              <h5>Produk</h5>
+            </div>
+            <div class="stats-box">
+              <h1>2.000+</h1>
+              <h5>Cabang dan Mitra</h5>
+            </div>
           </div>
         </div>
       </section>
       <!-- landing page section end -->
+
+      <!-- our product -->
+      <h1 class="section-title" style="margin-bottom: 1rem; text-align: center">
+        Cari semua kebutuhan anda disini
+      </h1>
+      <section class="our-product-section">
+        <div class="our-product-container1">
+          <div class="image-content">
+            <img src="image/category-pupuk.jpg" alt="" />
+          </div>
+          <div class="image-content">
+            <img src="image/category-tanaman-hias.jpg" alt="" />
+          </div>
+        </div>
+        <div class="our-product-container2">
+          <h1 style="text-align: center; width: 90%">
+            Mulai dari bibit, pupuk,perlengkapan, dan lainnya.
+          </h1>
+        </div>
+        <div class="our-product-container3">
+          <div class="image-content">
+            <img src="image/category-buah-sayur.jpg" alt="" />
+          </div>
+          <div class="image-content">
+            <img src="image/category-peralatan.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- our product end-->
+
+      <!-- ===== MITRA SECTION  -->
+      <section>
+        <h1
+          class="section-title"
+          style="margin-left: 3%; margin-top: 10vh; margin-bottom: 10px"
+        >
+          Temukan mitra kami di sekitar mu
+        </h1>
+
+        <section class="carousel-section">
+          <div class="carousel-container">
+            <button class="carousel-button prev" onclick="prevItem()">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <div class="carousel-wrapper">
+              <!-- =====ITEM====== -->
+              <div class="carousel-item item1">
+                <div class="container mitra">
+                  <img class="shop-image" src="image/toko.jpg" alt="" />
+                </div>
+                <div class="container mitra">
+                  <div class="text-container">
+                    <h1 class="shop-name">Toko Pak Santoso</h1>
+
+                    <div class="contact-info mitra">
+                      <h2><i class="bx bxs-phone-call"></i> Kontak</h2>
+                      <p class="shop-contact">
+                        Telepon: (021) 1234-5678
+                        <span style="color: rgb(61, 61, 112)"
+                          >Santosohijau@gmail.com</span
+                        >
+                      </p>
+                    </div>
+
+                    <div class="operational-hours mitra">
+                      <h2><i class="bx bxs-time"></i> Jam Operasional</h2>
+                      <p class="operational-time">Senin-Jumat: 09.00 - 18.00</p>
+                      <p class="operational-time">
+                        Sabtu-Minggu: 10.00 - 16.00
+                      </p>
+                    </div>
+
+                    <div class="available-products mitra">
+                      <h2>
+                        <i class="bx bxs-leaf"></i> Jenis Produk yang Tersedia
+                      </h2>
+                      <p class="available-product">
+                        - Tanaman hias,Pupuk,Perlengkapan Kebun,Pot,bibit
+                      </p>
+                    </div>
+
+                    <div class="loc mitra">
+                      <h2><i class="bx bxs-map"></i> Alamat</h2>
+                      <p class="loc">
+                        Jl. Beringin kel.Sukmajaya , kec. Cilodong, Depok
+                      </p>
+                      <a href=""> Lihat selengkapnya</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- =====ITEM====== -->
+              <div class="carousel-item item1">
+                <div class="container mitra">
+                  <img class="shop-image" src="image/toko.jpg" alt="" />
+                </div>
+                <div class="container mitra">
+                  <div class="text-container">
+                    <h1 class="shop-name">Toko Pak Santoso</h1>
+
+                    <div class="contact-info mitra">
+                      <h2><i class="bx bxs-phone-call"></i> Kontak</h2>
+                      <p class="shop-contact">
+                        Telepon: (021) 1234-5678
+                        <span style="color: rgb(61, 61, 112)"
+                          >Santosohijau@gmail.com</span
+                        >
+                      </p>
+                    </div>
+
+                    <div class="operational-hours mitra">
+                      <h2><i class="bx bxs-time"></i> Jam Operasional</h2>
+                      <p class="operational-time">Senin-Jumat: 09.00 - 18.00</p>
+                      <p class="operational-time">
+                        Sabtu-Minggu: 10.00 - 16.00
+                      </p>
+                    </div>
+
+                    <div class="available-products mitra">
+                      <h2>
+                        <i class="bx bxs-leaf"></i> Jenis Produk yang Tersedia
+                      </h2>
+                      <p class="available-product">
+                        - Tanaman hias,Pupuk,Perlengkapan Kebun,Pot,bibit
+                      </p>
+                    </div>
+
+                    <div class="loc mitra">
+                      <h2><i class="bx bxs-map"></i> Alamat</h2>
+                      <p class="loc">
+                        Jl. Beringin kel.Sukmajaya , kec. Cilodong, Depok
+                      </p>
+                      <a href=""> Lihat selengkapnya</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- =====ITEM====== -->
+              <div class="carousel-item item1">
+                <div class="container mitra">
+                  <img class="shop-image" src="image/toko.jpg" alt="" />
+                </div>
+                <div class="container mitra">
+                  <div class="text-container">
+                    <h1 class="shop-name">Toko Pak Santoso</h1>
+
+                    <div class="contact-info mitra">
+                      <h2><i class="bx bxs-phone-call"></i> Kontak</h2>
+                      <p class="shop-contact">
+                        Telepon: (021) 1234-5678
+                        <span style="color: rgb(61, 61, 112)"
+                          >Santosohijau@gmail.com</span
+                        >
+                      </p>
+                    </div>
+
+                    <div class="operational-hours mitra">
+                      <h2><i class="bx bxs-time"></i> Jam Operasional</h2>
+                      <p class="operational-time">Senin-Jumat: 09.00 - 18.00</p>
+                      <p class="operational-time">
+                        Sabtu-Minggu: 10.00 - 16.00
+                      </p>
+                    </div>
+
+                    <div class="available-products mitra">
+                      <h2>
+                        <i class="bx bxs-leaf"></i> Jenis Produk yang Tersedia
+                      </h2>
+                      <p class="available-product">
+                        - Tanaman hias,Pupuk,Perlengkapan Kebun,Pot,bibit
+                      </p>
+                    </div>
+
+                    <div class="loc mitra">
+                      <h2><i class="bx bxs-map"></i> Alamat</h2>
+                      <p class="loc">
+                        Jl. Beringin kel.Sukmajaya , kec. Cilodong, Depok
+                      </p>
+                      <a href=""> Lihat selengkapnya</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-button next" onclick="nextItem()">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <!-- ======MITRA SECTION END -->
 
       <!-- discount page  -->
       <section class="discount-section">
         <!-- main container -->
         <div class="discount-main-container">
           <!-- header -->
-          <h2>Diskon untukmu</h2>
+          <h2 class="section-title">Diskon untukmu</h2>
           <div class="discount-header-container">
             <div class="discount-box-container">
-              <div class="discount-box" id="box1"></div>
-              <div class="discount-box" id="box2"></div>
-              <div class="discount-box" id="box2"></div>
-              <div class="discount-box" id="box2"></div>
-              <div class="discount-box" id="box2"></div>
+              <div class="discount-box" id="box1">
+                <h1>Diskon 50% Untuk Pengguna Baru</h1>
+              </div>
+              <div class="discount-box" id="box2">
+                <h1>Diskon 50% Untuk Pengguna Baru</h1>
+              </div>
+              <div class="discount-box" id="box2">
+                <h1>Diskon 50% Untuk Pengguna Baru</h1>
+              </div>
+              <div class="discount-box" id="box2">
+                <h1>Diskon 50% Untuk Pengguna Baru</h1>
+              </div>
+              <div class="discount-box" id="box2">
+                <h1>Diskon 50% Untuk Pengguna Baru</h1>
+              </div>
             </div>
           </div>
 
           <!--======discount container 2 ===== -->
 
           <div class="discount-product-section">
-            <h2>Flash sale</h2>
+            <h2 class="section-title">Sedang Tren</h2>
             <div class="discount-product-list-container">
-              <div class="discount-title"></div>
+              <div class="discount-title"><h1>Sedang Tren</h1></div>
 
               <!-- discount card list  -->
               <div class="discount-product-list">
-                <a href="detailProduct.html"><div class="product-card">
-                  <img
-                    src="image/category-bibit.jpg"
-                    alt="product image"
-                    class="product-image"
-                  />
-                  <h5 class="product-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </h5>
-                  <div class="price-star-container">
-                    <h3 class="product-price">Rp 180.000</h3>
-                    <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div></a>
-                <a href="detailProduct.html"><div class="product-card">
-                  <img
-                    src="image/category-bibit.jpg"
-                    alt="product image"
-                    class="product-image"
-                  />
-                  <h5 class="product-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </h5>
-                  <div class="price-star-container">
-                    <h3 class="product-price">Rp 180.000</h3>
-                    <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div></a>
-                <a href="detailProduct.html"><div class="product-card">
-                  <img
-                    src="image/category-bibit.jpg"
-                    alt="product image"
-                    class="product-image"
-                  />
-                  <h5 class="product-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </h5>
-                  <div class="price-star-container">
-                    <h3 class="product-price">Rp 180.000</h3>
-                    <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div></a>
-                <a href="detailProduct.html"><div class="product-card">
-                  <img
-                    src="image/category-bibit.jpg"
-                    alt="product image"
-                    class="product-image"
-                  />
-                  <h5 class="product-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </h5>
-                  <div class="price-star-container">
-                    <h3 class="product-price">Rp 180.000</h3>
-                    <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div></a>
-                <a href="detailProduct.html"><div class="product-card">
-                  <img
-                    src="image/category-bibit.jpg"
-                    alt="product image"
-                    class="product-image"
-                  />
-                  <h5 class="product-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
-                  </h5>
-                  <div class="price-star-container">
-                    <h3 class="product-price">Rp 180.000</h3>
-                    <p class="before-discount-price">Rp 200.000</p>
-                    <p class="star">⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div></a>
-
+                <div class="discount-title-mobile">
+                  <h1>Sedang Tren</h1>
+                </div>
+                <a href="detailProduct.html" class="product-card-link-container"
+                  ><div class="card2">
+                    <h1 class="discount-card">-20%</h1>
+                    <span class="tag"
+                      ><i
+                        class="bx bxs-tag"
+                        style="font-size: large; padding: 0 3px"
+                      ></i
+                      >Tanaman Hias</span
+                    >
+                    <img
+                      src="image/product-example.jpg"
+                      alt="product image"
+                      class="product-image"
+                    />
+                    <h5 class="product-title">Neanthe Bella Palm</h5>
+                    <div class="price-star-container">
+                      <h3 class="product-price">Rp 180.000</h3>
+                      <p class="before-discount-price">Rp 200.000</p>
+                      <p class="star">
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i>
+                      </p>
+                      <p style="font-size: x-small">100 Ulasan</p>
+                    </div>
+                  </div></a
+                >
+                <!-- ========= -->
+                <a href="detailProduct.html" class="product-card-link-container"
+                  ><div class="card2">
+                    <h1 class="discount-card">-20%</h1>
+                    <span class="tag"
+                      ><i
+                        class="bx bxs-tag"
+                        style="font-size: large; padding: 0 3px"
+                      ></i
+                      >Tanaman Hias</span
+                    >
+                    <img
+                      src="image/product-example.jpg"
+                      alt="product image"
+                      class="product-image"
+                    />
+                    <h5 class="product-title">Neanthe Bella Palm</h5>
+                    <div class="price-star-container">
+                      <h3 class="product-price">Rp 180.000</h3>
+                      <p class="before-discount-price">Rp 200.000</p>
+                      <p class="star">
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i>
+                      </p>
+                      <p style="font-size: x-small">100 Ulasan</p>
+                    </div>
+                  </div></a
+                >
+                <a href="detailProduct.html" class="product-card-link-container"
+                  ><div class="card2">
+                    <h1 class="discount-card">-20%</h1>
+                    <span class="tag"
+                      ><i
+                        class="bx bxs-tag"
+                        style="font-size: large; padding: 0 3px"
+                      ></i
+                      >Tanaman Hias</span
+                    >
+                    <img
+                      src="image/product-example.jpg"
+                      alt="product image"
+                      class="product-image"
+                    />
+                    <h5 class="product-title">Neanthe Bella Palm</h5>
+                    <div class="price-star-container">
+                      <h3 class="product-price">Rp 180.000</h3>
+                      <p class="before-discount-price">Rp 200.000</p>
+                      <p class="star">
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i>
+                      </p>
+                      <p style="font-size: x-small">100 Ulasan</p>
+                    </div>
+                  </div></a
+                >
+                <a href="detailProduct.html" class="product-card-link-container"
+                  ><div class="card2">
+                    <h1 class="discount-card">-20%</h1>
+                    <span class="tag"
+                      ><i
+                        class="bx bxs-tag"
+                        style="font-size: large; padding: 0 3px"
+                      ></i
+                      >Tanaman Hias</span
+                    >
+                    <img
+                      src="image/product-example.jpg"
+                      alt="product image"
+                      class="product-image"
+                    />
+                    <h5 class="product-title">Neanthe Bella Palm</h5>
+                    <div class="price-star-container">
+                      <h3 class="product-price">Rp 180.000</h3>
+                      <p class="before-discount-price">Rp 200.000</p>
+                      <p class="star">
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i>
+                      </p>
+                      <p style="font-size: x-small">100 Ulasan</p>
+                    </div>
+                  </div></a
+                >
+                <a href="detailProduct.html" class="product-card-link-container"
+                  ><div class="card2">
+                    <h1 class="discount-card">-20%</h1>
+                    <span class="tag"
+                      ><i
+                        class="bx bxs-tag"
+                        style="font-size: large; padding: 0 3px"
+                      ></i
+                      >Tanaman Hias</span
+                    >
+                    <img
+                      src="image/product-example.jpg"
+                      alt="product image"
+                      class="product-image"
+                    />
+                    <h5 class="product-title">Neanthe Bella Palm</h5>
+                    <div class="price-star-container">
+                      <h3 class="product-price">Rp 180.000</h3>
+                      <p class="before-discount-price">Rp 200.000</p>
+                      <p class="star">
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i>
+                      </p>
+                      <p style="font-size: x-small">100 Ulasan</p>
+                    </div>
+                  </div></a
+                >
               </div>
             </div>
           </div>
@@ -234,196 +548,264 @@
 
       <!-- category section -->
 
-      <section class="category-section">
+      <section class="category-section" id="product-category">
         <header class="header-category">
           <div class="header-image">
-            <h1>Pupuk</h1>
+            <h1 id="category-title">Pupuk</h1>
           </div>
         </header>
         <div class="nav-product-category-container">
           <nav class="category-nav-container">
             <ul class="category-nav-links">
-              <li>Pupuk</li>
-              <li>Bibit</li>
-              <li>Perlengkapan</li>
-              <li>Media</li>
-              <li>Buah dan sayur</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
+              <li>
+                <a href="#product-category" onclick="changeTitle('Pupuk')"
+                  >Pupuk</a
+                >
+              </li>
+              <li>
+                <a href="#product-category" onclick="changeTitle('Bibit')"
+                  >Bibit</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#product-category"
+                  onclick="changeTitle('Perlengkapan')"
+                  >Perlengkapan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#product-category"
+                  onclick="changeTitle('Media  Tanam')"
+                  >Media Tanam</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#product-category"
+                  onclick="changeTitle('Buah dan sayur')"
+                  >Buah dan sayur</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#product-category"
+                  onclick="changeTitle('Tanaman Hias')"
+                  >Tanaman hias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#product-category"
+                  onclick="changeTitle('Buku Panduan  ')"
+                  >Buku Panduan</a
+                >
+              </li>
             </ul>
           </nav>
-          <div class="category-product-container">
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
-            <a href="detailProduct.html"><div class="product-card">
-              <img
-                src="image/category-bibit.jpg"
-                alt="product image"
-                class="product-image"
-              />
-              <h5 class="product-title">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </h5>
-              <div class="price-star-container">
-                <h3 class="product-price">Rp 180.000</h3>
-                <p class="before-discount-price">Rp 200.000</p>
-                <p class="star">⭐⭐⭐⭐⭐</p>
-              </div>
-            </div></a>
 
+          <div class="category-product-container">
+            <!-- =======PRODUCT CARD AREA -->
+
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+            <a href="detailProduct.html" class="product-card-link-container"
+              ><div class="card2">
+                <h1 class="discount-card">-20%</h1>
+                <span class="tag"
+                  ><i
+                    class="bx bxs-tag"
+                    style="font-size: large; padding: 0 3px"
+                  ></i
+                  >Tanaman Hias</span
+                >
+                <img
+                  src="image/product-example.jpg"
+                  alt="product image"
+                  class="product-image"
+                />
+                <h5 class="product-title">Neanthe Bella Palm</h5>
+                <div class="price-star-container">
+                  <h3 class="product-price">Rp 180.000</h3>
+                  <p class="before-discount-price">Rp 200.000</p>
+                  <p class="star">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                    ><i class="bx bxs-star"></i>
+                  </p>
+                  <p style="font-size: x-small">100 Ulasan</p>
+                </div>
+              </div></a
+            >
+
+            <!-- PRODUCT-CARD AREA END -->
           </div>
         </div>
       </section>
@@ -441,42 +823,109 @@
         screenWidth + "px"
       );
 
-      const box = document.getElementById("box");
+      // ====CAROUSEL FUNCTION
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".carousel-item");
+      const totalItems = items.length;
 
-      let isDown = false;
-      let startX;
-      let startY;
-      let scrollLeft;
-      let scrollTop;
+      function showItem(index) {
+        const newPosition = -index * 100 + "%";
+        document.querySelector(
+          ".carousel-wrapper"
+        ).style.transform = `translateX(${newPosition})`;
+      }
 
-      box.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - box.offsetLeft;
-        startY = e.pageY - box.offsetTop;
-        scrollLeft = box.scrollLeft;
-        scrollTop = box.scrollTop;
-        box.style.cursor = "grabbing";
+      function nextItem() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showItem(currentIndex);
+      }
+
+      function prevItem() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showItem(currentIndex);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        changeTitle("Pupuk");
+        var defaultActiveLink = document.querySelector(
+          'a[href="#product-category"]:first-child'
+        );
+        if (defaultActiveLink) {
+          defaultActiveLink.parentElement.classList.add("active");
+        }
       });
 
-      box.addEventListener("mouseleave", () => {
-        isDown = false;
-        box.style.cursor = "grab";
+      function changeTitle(title) {
+        document.getElementById("category-title").textContent = title;
+        var navLinks = document
+          .getElementsByClassName("category-nav-links")[0]
+          .getElementsByTagName("li");
+        for (var i = 0; i < navLinks.length; i++) {
+          navLinks[i].classList.remove("active");
+        }
+        var activeLink = document.querySelector(
+          'a[href="#product-category"]:focus'
+        );
+        if (activeLink) {
+          activeLink.parentElement.classList.add("active");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.getElementById("decrement");
+        const incrementButton = document.getElementById("increment");
+        const countElement = document.getElementById("count");
+        let count = 0;
+
+        decrementButton.addEventListener("click", function () {
+          count = Math.max(0, count - 1);
+          countElement.textContent = count;
+        });
+
+        incrementButton.addEventListener("click", function () {
+          count += 1;
+          countElement.textContent = count;
+        });
       });
 
-      box.addEventListener("mouseup", () => {
-        isDown = false;
-        box.style.cursor = "grab";
+      document.addEventListener("DOMContentLoaded", function () {
+        const heartButton = document.getElementById("heartButton");
+
+        heartButton.addEventListener("click", function () {
+          heartButton.style.color = "red";
+        });
       });
 
-      document.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - box.offsetLeft;
-        const y = e.pageY - box.offsetTop;
-        const walkX = (x - startX) * 1; // Change this number to adjust the scroll speed
-        const walkY = (y - startY) * 1; // Change this number to adjust the scroll speed
-        box.scrollLeft = scrollLeft - walkX;
-        box.scrollTop = scrollTop - walkY;
+      // untuk chat
+      const openChatButton = document.getElementById("openChat");
+      const closeChatButton = document.getElementById("closeChat");
+      const chatBox = document.getElementById("chatSection");
+      const chatContent = document.getElementById("chatContent");
+
+      const fileInput = document.getElementById("fileInput");
+
+      openChatButton.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+      <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+      <div class="message user">Tentu! Bagaimana cara memesan?</div>
+      <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+    `;
+      });
+
+      closeChatButton.addEventListener("click", () => {
+        chatBox.style.display = "none";
+      });
+
+      const openChatButtonMobile = document.getElementById("openChatMobile");
+
+      openChatButtonMobile.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatContent.innerHTML = `
+    <div class="message admin">Halo! Ada yang bisa saya bantu?</div>
+    <div class="message user">Tentu! Bagaimana cara memesan?</div>
+    <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
+  `;
       });
     </script>
   </body>

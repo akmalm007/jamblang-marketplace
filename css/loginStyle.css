@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Maven+Pro:wght@400..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --green: rgb(101, 167, 147);
+  --primary: rgb(118, 221, 164);
+  --secondary: rgb(75, 117, 96);
+  --accent: #9cceaf;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.plantopia {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background-color: rgba(49, 85, 73, 0.548);
+  backdrop-filter: blur(5px);
+
+  color: var(--background);
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+
+  & h1 {
+    font-family: "Maven Pro";
+    font-size: 56pt;
+  }
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.form-section {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  & h2,
+  p {
+    text-align: center;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+    font-size: small;
+    color: var(--secondary);
+  }
+}
+
+.plantopia {
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.forgot-password {
+  margin-bottom: 15px;
+  display: block;
+  text-align: right;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+
+  font-size: larger;
+  font-weight: bolder;
+  width: 60%;
+  margin: 1rem auto 0;
+
+  cursor: pointer;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+
+  & a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: #191a19;
+    padding: 0 1rem;
+  }
+}
+
+.photo-section {
+  width: 66.66%;
+  height: 100%;
+  background-image: url(../image/loginbg2.jpg);
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+  background-position-y: bottom;
+}
+
+@media (max-width: 768px) {
+  .plantopia {
+    position: absolute;
+    top: 10px;
+    right: auto;
+    z-index: 10;
+    backdrop-filter: unset;
+    background-color: transparent;
+    color: var(--secondary);
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+
+    & h1 {
+      font-family: "Maven Pro";
+      font-size: x-large;
+    }
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: auto;
+    height: 100%;
+
+    & form {
+      background: #5c6f6587;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+      padding: 1rem;
+      border-radius: 5px;
+      color: var(--card);
+      backdrop-filter: blur(5px);
+    }
+
+    .forgot-password {
+      color: var(--card);
+    }
+    & h2 {
+      margin-top: 5rem;
+    }
+
+    background: url(../image/landingbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-x: 50%;
+  }
+
+  .photo-section {
+    display: none;
+    width: 100%;
+    height: 200px; /* Set the height as needed */
+  }
+}

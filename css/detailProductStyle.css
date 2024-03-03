@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +7,51 @@
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b756a #dcebe0;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #dcebe0;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #eeffef;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b6e1cb;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4b756a;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #83a376;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #75a374;
+}
 :root {
-  --background: #f0f9f4;
-  --primary: #dfe9df;
-  --secondary: #d7f1ee;
-  --accent: #2e7d32;
+  --green: rgb(101, 167, 147);
+  --primary: rgb(118, 221, 164);
+  --secondary: rgb(75, 117, 96);
+  --accent: #9cceaf;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -19,18 +61,43 @@ body {
 
 /* NAV SECTION */
 .desktop-nav {
+  box-shadow: var(--shadow);
+
   visibility: visible;
   display: flex;
-  background-color: var(--secondary);
-  filter: blur(100%);
+  /* From https://css.glass */
+  background: rgba(143, 230, 179, 0.64);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(91, 235, 175, 0.66);
+  /* effect */
   height: fit-content;
   width: 100%;
+  z-index: 1000;
+  padding: 5px 0;
   align-items: center;
   justify-content: space-around;
   position: fixed;
 
-  z-index: 100;
+  & h1 {
+    font-size: x-large;
+  }
 }
+
+.nav-links {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & a {
+    color: var(--secondary-color);
+    font-size: x-large;
+  }
+}
+
 .mobile-nav {
   visibility: hidden;
 }
@@ -39,29 +106,84 @@ body {
   visibility: hidden;
   display: none;
 }
+.back-container {
+  display: none;
+}
+.search-container {
+  width: 400px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  background: white;
+  padding: 5px;
+}
+
+.search-button {
+  color: #57735f;
+  border: none;
+  cursor: pointer;
+  object-position: center;
+  background-color: white;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.search-icon {
+  font-size: 20px; /* Ganti ukuran ikon sesuai kebutuhan */
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 2pxx;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(22, 102, 68);
+}
+
+/* Styling tambahan sesuai kebutuhan */
+
+/* Styling tambahan sesuai kebutuhan */
 
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
+
+  & a {
+    text-decoration: none;
+    color: #365e46;
+  }
 }
 
 .user-box {
   width: fit-content;
   height: fit-content;
-  padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #eeeced;
   display: inline-flex;
   align-items: center;
+  padding-left: 1rem;
+
+  & p {
+    margin-right: 1rem;
+  }
 }
 
 .user-profile {
-  background-color: red;
+  background-color: rgb(101, 167, 147);
   height: 35px;
   width: 35px;
-  border-radius: 50%;
+  border-radius: 5px;
   margin-left: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
 }
+
 /* NAV SECTION END */
 
 .main-content {
@@ -91,8 +213,8 @@ body {
   width: 600px;
   height: 500px;
   margin: 0 auto;
-  border-radius: 2%;
-  background-color: var(--primary);
+  border-radius: 5px;
+  background-color: var(--card);
 }
 
 .display-photo-container {
@@ -118,17 +240,21 @@ body {
 
   margin-top: 10px;
   padding: 10px 0;
-  background-color: var(--accent);
-  width: 90%;
+  background-color: var(--card);
+  width: 100%;
   margin: 10px auto;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: var(--shadow);
 }
 
 .icon-container a {
   font-size: xx-large;
   text-decoration: none;
-  color: var(--background); /* Ganti dengan warna yang diinginkan */
+  color: var(--text);
+
+  & .liked {
+    color: #ee4562;
+  }
 }
 
 .icon-container a:hover {
@@ -145,12 +271,64 @@ body {
 .other-photo {
   display: block;
   margin-bottom: 10px;
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
 }
 
 .other-photo img {
   width: 100%;
-  height: auto;
-  max-height: 100px; /* Sesuaikan dengan kebutuhan Anda */
+  height: 100%;
+
+  border-radius: 5px;
+  object-fit: cover;
+  max-height: 150px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+/* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
+
+.buy-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.beli {
+  padding: 10px 3rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--secondary);
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#increment {
+  background-color: var(--primary);
+}
+
+#decrement {
+  background-color: rgb(224, 56, 56);
+}
+
+#increment,
+#decrement {
+  padding: 5px 20px;
+  margin: 0 1rem;
+  font-weight: 700;
+  font-size: x-large;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
 /* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
@@ -159,14 +337,24 @@ body {
   width: 50%;
   height: auto;
 }
+
+.desc {
+  border-bottom: 2px solid var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.desc-content {
+  padding: 0 1rem;
+}
+
 .price-desc-container {
   box-shadow: var(--shadow);
   width: auto;
   height: 100%;
-  background-color: var(--secondary);
+  background-color: var(--card);
   margin: 0 1rem;
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 2px solid var(--accent);
 }
 
@@ -191,22 +379,34 @@ body {
   display: flex;
   padding: 10px;
   background: #a6a6f0;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 1rem;
 }
 
 .star {
   margin-right: 1rem;
+  color: #ebc23e;
 }
 
 .price {
   font-size: xx-large;
   margin-bottom: 10px;
+
+  & span {
+    color: white;
+    background-color: var(--primary);
+    padding: 10px;
+    font-size: medium;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
 }
 
 .before-discount-price {
-  font-weight: lighter;
-  color: #00000078;
+  font-weight: light;
+  color: #797979;
   text-decoration: line-through;
   margin-bottom: 1rem;
 }
@@ -216,7 +416,7 @@ body {
 /* Inline #2 | http://127.0.0.1:5500/detailProduct.html */
 
 .review-title {
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: fit-content;
 }
 
@@ -230,8 +430,8 @@ body {
 
 .user-rating-main-container {
   display: flex;
-  background: var(--secondary);
-  border-radius: 10px;
+  background: var(--card);
+  border-radius: 5px;
   padding: 1rem 2rem;
   margin-bottom: 1rem;
   box-shadow: var(--shadow);
@@ -247,6 +447,13 @@ body {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .user-image {
@@ -254,10 +461,13 @@ body {
   height: 100px;
   background: white;
   margin: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--accent);
 }
 
 .star-user {
   padding: 1rem 0;
+  color: #ebc23e;
 }
 
 .profile {
@@ -265,7 +475,7 @@ body {
   height: 40px;
   background: blue;
   margin-right: 1rem;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .name-profile-container {
@@ -280,7 +490,7 @@ body {
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(133, 173, 158);
     position: fixed;
     bottom: 0;
     display: flex;
@@ -296,6 +506,10 @@ body {
     height: 50%;
     margin: 0 auto;
     justify-content: space-around;
+
+    & a {
+      color: inherit;
+    }
   }
 
   .web-title {
@@ -307,12 +521,13 @@ body {
     width: 100%;
     height: 60px;
     position: fixed;
-    background-color: rebeccapurple;
+    background-color: rgb(133, 173, 158);
     visibility: visible;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kedalaman */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan untuk kedalaman */
   }
 
   .search-container {
@@ -322,13 +537,16 @@ body {
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
-    width: 50%; /* Lebar container pencarian */
+    width: 50%;
+    /* Lebar container pencarian */
   }
 
   .search-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
   }
 
   input[type="search"] {
@@ -339,20 +557,22 @@ body {
     font-size: 16px;
     color: #333;
   }
+
   /* Icon pencarian */
   .search-icon {
     font-size: 24px;
-    color: rebeccapurple;
+    color: #65a793;
     margin-left: 10px;
   }
 
   .user-profile {
-    background-color: red;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    margin: 0 10px;
+    background-color: rgb(101, 167, 147);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    margin: 0;
   }
+
   /* Hover effect pada tombol pencarian */
   .search-button:hover {
     background-color: #ddd;
@@ -362,18 +582,41 @@ body {
     visibility: hidden;
   }
 
-  /* nav search section end */
+  .back-container {
+    display: initial;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    position: fixed;
+    padding: 1rem;
+    width: 100%;
+    height: 50px;
+    background-color: var(--card);
+    box-shadow: var(--shadow);
+    font-size: x-large;
+    font-weight: bolder;
 
-  /* NAVBAR END */
+    .back-button {
+      font-size: x-large;
+      font-weight: bolder;
+    }
 
-  /* ====== PHOTOS PRODUCT */
+    & .icon {
+      font-size: xx-large;
+      align-self: center;
+      margin-top: 5px;
+      font-weight: bolder;
+      color: var(--text);
+    }
+  }
 
-  /* detailProductStyle.css | http://127.0.0.1:5500/css/detailProductStyle.css */
-
+  /* navbar mobile end */
   .photo-container {
     width: 100%;
     flex-direction: column;
     height: auto;
+    background-color: transparent;
   }
   .photo-collection {
     display: inle;
@@ -385,6 +628,10 @@ body {
     max-width: 100%;
     overflow-x: auto;
     margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 5px;
   }
   .other-photo {
     /* width: 386px; */
@@ -405,29 +652,47 @@ body {
   .photos-main-container {
     position: unset;
     margin-top: 5vh;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .display-photo-container {
     height: auto;
-    width: 300px;
+    width: 350px;
+    max-width: 250px;
     margin: 0 auto;
   }
   .display-photo {
     height: 300px;
+    padding: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--card);
+    border: 2px solid var(--accent);
+
+    object-position: center;
   }
-  .icon-container {
-  }
-  .icon-container a {
-  }
-  .icon-container i {
-  }
+
   .buy-container {
+    width: 100%;
+    align-items: center;
+    top: 10rem;
+
+    & .beli {
+      padding: 1rem 3rem;
+      font-size: large;
+    }
+
+    & #increment,
+    #decrement {
+      padding: 5px 15px;
+    }
   }
   /* ======PHOTOS PRODUCT END */
 
   /* =======desc n price product */
   .detail-product-section {
     flex-direction: column;
+    padding-top: 1rem;
   }
 
   .photos-main-container {
@@ -442,8 +707,7 @@ body {
     padding: 1rem;
     margin: 0;
   }
-  .title-product {
-  }
+
   .star-tag-container {
     max-width: 100%;
     flex-wrap: wrap;
@@ -451,12 +715,6 @@ body {
   }
   .tags-box {
     margin: 1rem 0;
-  }
-  .star {
-  }
-  .price {
-  }
-  .before-discount-price {
   }
 
   .rating-section {

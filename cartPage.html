@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/cartStyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="back-container">
+      <a href="index.html" id="back-button" onclick="goBack()">
+        <i class="bx bx-chevron-left icon"></i>
+      </a>
+      <p class="keranjang" style="width: fit-content">Keranjangmu</p>
+    </div>
+
+    <!-- FOR MOBILE CART PAGE  -->
+
+    <main class="main-container-mobile">
+      <section class="product-details-section-mobile">
+        <div class="product-container">
+          <img src="image/product-example.jpg" class="product-image" alt="" />
+          <div class="product-details">
+            <div class="text-container-mobile">
+              <h2 class="product-name">Neanthe Bella Plam</h2>
+              <h1 class="product-price">Rp 180.000</h1>
+            </div>
+
+            <div class="counter-delete">
+              <div class="counter">
+                <button class="decrement">-</button>
+                <span class="count">0</span>
+                <button class="increment">+</button>
+              </div>
+              <button class="delete-button">
+                <i class="bx bxs-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-container">
+          <img
+            src="image/other-photo-product.jpg"
+            class="product-image"
+            alt=""
+          />
+          <div class="product-details">
+            <div class="text-container-mobile">
+              <h2 class="product-name">Contoh Produk</h2>
+              <h1 class="product-price">Rp 180.000</h1>
+            </div>
+
+            <div class="counter-delete">
+              <div class="counter">
+                <button class="decrement">-</button>
+                <span class="count">0</span>
+                <button class="increment">+</button>
+              </div>
+              <button class="delete-button">
+                <i class="bx bxs-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-container">
+          <img
+            src="image/other-photo-product.jpg"
+            class="product-image"
+            alt=""
+          />
+          <div class="product-details">
+            <div class="text-container-mobile">
+              <h2 class="product-name">Contoh Produk</h2>
+              <h1 class="product-price">Rp 180.000</h1>
+            </div>
+
+            <div class="counter-delete">
+              <div class="counter">
+                <button class="decrement">-</button>
+                <span class="count">0</span>
+                <button class="increment">+</button>
+              </div>
+              <button class="delete-button">
+                <i class="bx bxs-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOR MOBILE CART PAGE END -->
+    <div class="container">
+      <div id="product-details">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Product 1 -->
+            <!-- Product 1 -->
+            <tr class="product-row" data-id="1" data-price="10000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/product-example.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Neanthe Bella Palm</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 180.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+            <!-- Product 2 -->
+            <tr class="product-row" data-id="2" data-price="25000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/other-photo-product.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Contoh Produk</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 250.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+            <!-- Product 3 -->
+            <tr class="product-row" data-id="3" data-price="50000">
+              <td class="product-info">
+                <div class="product-img">
+                  <img src="image/other-photo-product.jpg" alt="" />
+                </div>
+                <div class="product-details">
+                  <p class="product-name">Contoh Produk</p>
+                </div>
+              </td>
+              <td>
+                <div class="counter">
+                  <button class="decrement">-</button>
+                  <span class="count">0</span>
+                  <button class="increment">+</button>
+                </div>
+              </td>
+              <td class="product-price">Rp 100.000</td>
+              <td class="total-price">Rp 0</td>
+              <td>
+                <button class="delete-button">
+                  <i class="bx bxs-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="" class="continue-button">
+          lanjut berbelanja? <i class="bx bxs-shopping-bags"></i
+        ></a>
+      </div>
+
+      <!-- Right Section - Payment Details -->
+
+      <div id="payment-details">
+        <button class="expand-button" onclick="">
+          <i class="bx bx-chevron-up"></i>
+        </button>
+        <div class="text-container">
+          <h2>Payment Details</h2>
+          <div id="product-summary"></div>
+          <div id="subtotal">Subtotal: Rp 0</div>
+          <div id="shipping">Ongkir: 5.000</div>
+          <div id="tax">Pajak: 2%</div>
+          <div id="total">Total: Rp 0</div>
+          <button id="buy-button">
+            Atur Pesanan <i class="bx bx-credit-card icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="cartFunction.js"></script>
+    <script src="cartMobile.js"></script>
+  </body>
+</html>
