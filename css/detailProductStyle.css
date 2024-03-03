@@ -106,6 +106,9 @@ body {
   visibility: hidden;
   display: none;
 }
+.back-container {
+  display: none;
+}
 .search-container {
   width: 400px;
   border-radius: 5px;
@@ -238,7 +241,7 @@ input[type="search"] {
   margin-top: 10px;
   padding: 10px 0;
   background-color: var(--card);
-  width: 80%;
+  width: 100%;
   margin: 10px auto;
   border-radius: 5px;
   box-shadow: var(--shadow);
@@ -388,11 +391,22 @@ button {
 .price {
   font-size: xx-large;
   margin-bottom: 10px;
+
+  & span {
+    color: white;
+    background-color: var(--primary);
+    padding: 10px;
+    font-size: medium;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
 }
 
 .before-discount-price {
-  font-weight: lighter;
-  color: #00000078;
+  font-weight: light;
+  color: #797979;
   text-decoration: line-through;
   margin-bottom: 1rem;
 }
@@ -433,6 +447,13 @@ button {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .user-image {
@@ -561,14 +582,36 @@ button {
     visibility: hidden;
   }
 
-  /* nav search section end */
+  .back-container {
+    display: initial;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    position: fixed;
+    padding: 1rem;
+    width: 100%;
+    height: 50px;
+    background-color: var(--card);
+    box-shadow: var(--shadow);
+    font-size: x-large;
+    font-weight: bolder;
 
-  /* NAVBAR END */
+    .back-button {
+      font-size: x-large;
+      font-weight: bolder;
+    }
 
-  /* ====== PHOTOS PRODUCT */
+    & .icon {
+      font-size: xx-large;
+      align-self: center;
+      margin-top: 5px;
+      font-weight: bolder;
+      color: var(--text);
+    }
+  }
 
-  /* detailProductStyle.css | http://127.0.0.1:5500/css/detailProductStyle.css */
-
+  /* navbar mobile end */
   .photo-container {
     width: 100%;
     flex-direction: column;
@@ -615,6 +658,7 @@ button {
   .display-photo-container {
     height: auto;
     width: 350px;
+    max-width: 250px;
     margin: 0 auto;
   }
   .display-photo {
@@ -634,7 +678,7 @@ button {
     top: 10rem;
 
     & .beli {
-      padding: 1rem 5rem;
+      padding: 1rem 3rem;
       font-size: large;
     }
 
