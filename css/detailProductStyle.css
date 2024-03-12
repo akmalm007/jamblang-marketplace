@@ -43,7 +43,7 @@
 *::-webkit-scrollbar-thumb:active {
   background-color: #75a374;
 }
-/* :root {
+:root {
   --green: rgb(101, 167, 147);
   --primary: rgb(118, 221, 164);
   --secondary: rgb(75, 117, 96);
@@ -51,17 +51,6 @@
   --background: #f5f5f5;
   --text: #101111;
   --card: #dbf7e0;
-  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
-:root {
-  --green: rgb(101, 167, 121);
-  --primary: rgb(161, 221, 118);
-  --secondary: rgb(115, 143, 106);
-  --accent: #c2e3b7;
-  --background: #f5f5f5;
-  --text: #101111;
-  --card: #eaf9e7;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
