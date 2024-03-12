@@ -56,8 +56,10 @@
           <div class="profile-picture"><i class="bx bxs-user"></i></div>
           <p>Nama Admin</p>
         </div>
-        <div class="chat-content" id="chatContent">
-          <!-- Chat bubbles will be appended here -->
+        <div class="chat-content-container">
+          <div class="chat-content" id="chatContent">
+            <!-- Chat bubbles will be appended here -->
+          </div>
         </div>
         <div class="input-area">
           <button>
@@ -151,15 +153,15 @@
 
           <div class="stats-container">
             <div class="stats-box">
-              <h1>350.000+</h1>
+              <h1 class="counter" data-target="1000000">350.000</h1>
               <h5>Pengguna</h5>
             </div>
             <div class="stats-box">
-              <h1>10.000+</h1>
+              <h1 class="counter" data-target="10000">10.000</h1>
               <h5>Produk</h5>
             </div>
             <div class="stats-box">
-              <h1>2.000+</h1>
+              <h1 class="counter" data-target="2000">2.000</h1>
               <h5>Cabang dan Mitra</h5>
             </div>
           </div>
@@ -927,6 +929,58 @@
     <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
   `;
       });
+      const sendTextButton = document.getElementById("sendText");
+      const messageInput = document.querySelector(".input-area input");
+
+      sendTextButton.addEventListener("click", () => {
+        const userMessage = messageInput.value.trim();
+
+        if (userMessage !== "") {
+          appendMessage("user", userMessage);
+          messageInput.value = "";
+          setTimeout(() => {
+            appendMessage(
+              "admin",
+              "Terima kasih atas pertanyaannya! Tim kami akan segera menghubungi Anda."
+            );
+          }, 1000);
+        }
+      });
+
+      messageInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault(); // Prevent the default behavior of Enter (e.g., new line)
+          sendMessage();
+        }
+      });
+
+      function appendMessage(sender, message) {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message", sender);
+        messageElement.textContent = message;
+        chatContent.appendChild(messageElement);
+      }
+
+      // Selector
+      const counters = document.querySelectorAll(".counter");
+
+      // Main function
+      for (let n of counters) {
+        const updateCount = () => {
+          const target = +n.getAttribute("data-target");
+          const count = +n.innerText.replace(/,/g, ""); // remove existing commas
+          const speed = 500; // change animation speed here
+          const inc = target / speed;
+
+          if (count < target) {
+            n.innerText = Math.ceil(count + inc).toLocaleString(); // add commas
+            setTimeout(updateCount, 1);
+          } else {
+            n.innerText = target.toLocaleString(); // add commas to the final value
+          }
+        };
+        updateCount();
+      }
     </script>
   </body>
 </html>

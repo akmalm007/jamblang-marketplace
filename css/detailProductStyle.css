@@ -43,7 +43,7 @@
 *::-webkit-scrollbar-thumb:active {
   background-color: #75a374;
 }
-:root {
+/* :root {
   --green: rgb(101, 167, 147);
   --primary: rgb(118, 221, 164);
   --secondary: rgb(75, 117, 96);
@@ -51,6 +51,17 @@
   --background: #f5f5f5;
   --text: #101111;
   --card: #dbf7e0;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+:root {
+  --green: rgb(101, 167, 121);
+  --primary: rgb(161, 221, 118);
+  --secondary: rgb(115, 143, 106);
+  --accent: #c2e3b7;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #eaf9e7;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -567,11 +578,17 @@ button {
 }
 
 .rating-section {
-  width: 85%;
+  width: 95%;
   height: auto;
+  display: flex;
+  padding-bottom: 5vh;
 
   margin: 0 auto;
   padding: 1rem;
+}
+
+.user-review-wrapper {
+  width: 100%;
 }
 
 .user-rating-main-container {
@@ -630,15 +647,115 @@ button {
   padding: 1rem 0;
 }
 
+.filter-container {
+  padding: 10px;
+  width: 200px;
+  gap: 1rem;
+  margin-right: 1rem;
+  position: sticky;
+  height: fit-content;
+  top: 55px;
+  background-color: var(--secondary);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+
+  & button {
+    padding: 1rem;
+    outline: none;
+
+    width: 100%;
+
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    border: 1px solid var(--accent);
+  }
+}
+
+.rating-icon {
+  color: #ebc23e;
+}
+
+.filter-button {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.image-upload .icon {
+  font-size: xx-large;
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.input-container {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.user-input-field {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 5px;
+}
+
+.input-review {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  background-color: var(--secondary);
+}
+
+.submit-review {
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+
+  background-color: var(--primary);
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.go-up {
+  padding: 1rem;
+  background-color: var(--secondary);
+  border-radius: 25px;
+  position: fixed;
+  bottom: 5vh;
+  right: 1rem;
+  height: fit-content;
+
+  & .icon {
+    font-size: xx-large;
+    color: white;
+  }
+}
 /* ======REVIEW SECTION END===== */
 @media only screen and (max-width: 1024px) {
   /* NAVBAR  */
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: rgb(133, 173, 158);
+    background-color: var(--secondary);
     position: fixed;
     bottom: 0;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -865,7 +982,42 @@ button {
 
   .rating-section {
     padding-bottom: 12vh;
+    flex-direction: column;
     width: 100%;
+    padding: 0;
+    padding-bottom: 5vh;
+  }
+  .go-up {
+    bottom: 5vh;
+  }
+  .filter-container {
+    justify-content: space-between;
+    display: flex;
+    padding: 1rem;
+    top: 50px;
+    width: 100%;
+
+    align-items: center;
+    max-width: 100%;
+    overflow-x: auto;
+    & button {
+      white-space: nowrap;
+      width: fit-content;
+      height: fit-content;
+      font-size: medium;
+      padding: 10px;
+
+      margin: 0;
+    }
+    margin: 0;
+  }
+  .filter-button {
+    flex-direction: row;
+    width: fit-content;
+    gap: 1rem;
+  }
+  .user-review-wrapper {
+    padding: 1rem;
   }
   .user-rating-main-container {
     flex-direction: column;
@@ -874,6 +1026,23 @@ button {
   .user-image-container {
     display: flex;
     flex-wrap: wrap;
+  }
+  /* CHAT SECTION */
+  .chat-section {
+    z-index: 1;
+  }
+  .chat-box {
+    padding: 0;
+    width: 85%;
+    height: 100dvh;
+    transform: scale() translate(-85%, 10%);
+    top: 50%;
+    z-index: 100;
+    position: fixed; /* Gunakan fixed agar tetap di layar */ /* Posisikan di tengah horizontal */
+  }
+  .chat-content-container {
+    max-height: 100%;
+    padding: 10px;
   }
 }
 
@@ -885,10 +1054,18 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   .chat-box {
-    transform: scale(0.6) translate(-85%, -87%);
+    width: 100%;
+    height: 100dvh;
+    transform: scale() translate(-85%, 10%);
+    top: 50%;
+    z-index: 1000;
     position: fixed; /* Gunakan fixed agar tetap di layar */ /* Posisikan di tengah horizontal */
+  }
+  .chat-content-container {
+    max-height: 100%;
   }
 }

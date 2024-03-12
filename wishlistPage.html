@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist Product</title>
+    <link rel="stylesheet" href="css/wishlistStyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Wishlist</title>
+      </head>
+      <body>
+        <div class="wishlist-container">
+          <div class="wishlist-header">
+            <button class="back-button">
+              <a href="index.html" style="color: inherit">
+                <i class="bx bx-chevron-left icon"></i
+              ></a>
+            </button>
+            <h1 class="wishlist-title">Wishlist</h1>
+          </div>
+
+          <div class="wishlist-section" id="pupuk-section">
+            <div class="section-header">
+              <h2 class="category-title">Pupuk</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('pupuk-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content">
+              <!-- Cards for Pupuk category -->
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="bibit-section">
+            <div class="section-header">
+              <h2 class="category-title">Bibit</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('bibit-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content">
+              <!-- Cards for Bibit category -->
+
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="media-tanam-section">
+            <div class="section-header">
+              <h2 class="category-title">Media Tanam</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('media-tanam-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content">
+              <!-- Cards for Media Tanam category -->
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="tanaman-hias-section">
+            <div class="section-header">
+              <h2 class="category-title">Tanaman Hias</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('tanaman-hias-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content" id="tanaman-hias-content">
+              <!-- Cards for Tanaman Hias category -->
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="perlengkapan-section">
+            <div class="section-header">
+              <h2 class="category-title">Perlengkapan</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('perlengkapan-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content" id="perlengkapan-content">
+              <!-- Cards for Perlengkapan category -->
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+              <a href="detailProduct.html" class="product-card-link-container"
+                ><div class="card2">
+                  <h1 class="discount-card">-20%</h1>
+                  <span class="tag"
+                    ><i
+                      class="bx bxs-tag"
+                      style="font-size: large; padding: 0 3px"
+                    ></i
+                    >Tanaman Hias</span
+                  >
+                  <img
+                    src="image/product-example.jpg"
+                    alt="product image"
+                    class="product-image"
+                  />
+                  <h5 class="product-title">Neanthe Bella Palm</h5>
+                  <div class="price-star-container">
+                    <h3 class="product-price">Rp 180.000</h3>
+                    <p class="before-discount-price">Rp 200.000</p>
+                    <p class="star">
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i>
+                    </p>
+                    <p style="font-size: x-small">100 Ulasan</p>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="buah-sayur-section">
+            <div class="section-header">
+              <h2 class="category-title">Buah dan Sayur</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('buah-sayur-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content" id="buah-sayur-content">
+              <!-- Cards for Buah dan Sayur category -->
+            </div>
+          </div>
+
+          <div class="wishlist-section" id="buku-panduan-section">
+            <div class="section-header">
+              <h2 class="category-title">Buku Panduan</h2>
+              <button
+                class="expand-button"
+                onclick="toggleExpand('buku-panduan-section')"
+              >
+                <i class="bx bx-chevron-down"></i>
+              </button>
+            </div>
+            <div class="section-content" id="buku-panduan-content">
+              <!-- Cards for Buku Panduan category -->
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function toggleExpand(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = document.getElementById(sectionId + "-content");
+            const icon = section.querySelector(".bx-chevron-down");
+
+            if (section.classList.contains("collapsed")) {
+              section.classList.remove("collapsed");
+              section.classList.add("expanded");
+              icon.classList.add("expanded");
+            } else {
+              section.classList.remove("expanded");
+              section.classList.add("collapsed");
+              icon.classList.remove("expanded");
+            }
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

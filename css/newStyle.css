@@ -16,14 +16,25 @@
 
 :root {
   --green: rgb(101, 167, 147);
-  --primary-color: rgb(118, 221, 164);
-  --secondary-color: rgb(75, 117, 96);
-  --tertiary-color: #9cceaf;
+  --primary: rgb(118, 221, 164);
+  --secondary: rgb(75, 117, 96);
+  --accent: #9cceaf;
   --background: #f5f5f5;
   --text: #101111;
   --card: #dbf7e0;
-  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
+/* :root {
+  --green: rgb(101, 167, 121);
+  --primary: rgb(139, 187, 137);
+  --secondary: rgb(115, 143, 106);
+  --accent: #c2e3b7;
+  --background: #f5f5f5;
+  --text: #101111;
+  --card: #eaf9e7;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
 * {
@@ -92,7 +103,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
 
@@ -103,19 +114,21 @@ body {
   }
 }
 
-.header button {
+.header button .icon {
+  height: fit-content;
   float: left;
-  padding: 0 1rem;
+  padding: 10px 1rem 0;
+  font-size: 50pt;
 }
 
 .user-info {
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 0;
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: var(--tertiary-color);
+  background-color: var(--accent);
 
   padding: 1rem 0;
   & p {
@@ -168,6 +181,14 @@ body {
   flex-direction: column;
   overflow-y: auto;
   border: 5px;
+  margin-bottom: 5rem;
+}
+
+.chat-content-container {
+  width: 100%;
+  height: auto;
+  max-height: 410px;
+  overflow-y: auto;
 }
 
 .input-area {
@@ -177,7 +198,11 @@ body {
   width: 100%;
   display: flex;
   padding: 5px 0;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
+
+  & button {
+    color: var(--card);
+  }
 }
 
 .input-area input {
@@ -257,7 +282,7 @@ body {
   gap: 1rem;
 
   & a {
-    color: var(--secondary-color);
+    color: var(--secondary);
     font-size: x-large;
   }
 }
@@ -285,7 +310,7 @@ body {
 }
 
 .search-button {
-  color: var(--secondary-color);
+  color: var(--secondary);
   border: none;
   cursor: pointer;
   object-position: center;
@@ -314,13 +339,13 @@ input[type="search"] {
 .web-title {
   padding: 0 1rem;
   font-size: 36px;
-  color: var(--secondary-color);
+  color: var(--secondary);
 
   & a {
     font-family: "Maven Pro";
     font-weight: 700;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--secondary);
   }
 }
 
@@ -339,7 +364,7 @@ input[type="search"] {
 }
 
 .user-profile {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
   height: 35px;
   width: 35px;
   border-radius: 5px;
@@ -374,6 +399,7 @@ input[type="search"] {
   /* background-image: url(../image/blurrygrd1.svg); */
   background-image: url(../image/blurrygrd3.svg);
   background-position: center;
+  background-size: cover;
   width: 50%;
   border-radius: 5px;
   box-shadow: var(--shadow);
@@ -482,7 +508,7 @@ input[type="search"] {
     font-weight: 800;
     color: var(--background);
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--secondary-color);
+    -webkit-text-stroke-color: var(--secondary);
   }
 
   & p {
@@ -511,8 +537,8 @@ input[type="search"] {
 
 .login {
   font-size: larger;
-  background: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
+  background: var(--secondary);
+  border: 2px solid var(--secondary);
   border-radius: 5px;
   & a {
     color: white;
@@ -565,7 +591,7 @@ input[type="search"] {
   width: 95%;
   margin: auto;
   display: flex;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary);
   padding: 1rem;
   border-radius: 5px;
 }
@@ -656,7 +682,7 @@ input[type="search"] {
   gap: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--tertiary-color);
+  background-color: var(--accent);
 }
 
 .carousel-button {
@@ -665,7 +691,7 @@ input[type="search"] {
   transform: translateY(-50%);
   font-size: 18px;
   cursor: pointer;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
   color: var(--background);
   border: none;
   padding: 10px;
@@ -962,7 +988,7 @@ h2 {
   border: 1px solid #ddd;
 
   /* padding: 10px; */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   text-align: center;
   position: relative;
   z-index: -1;
@@ -974,7 +1000,7 @@ h2 {
   left: 0;
   width: fit-content;
   padding: 10px;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: rgb(250, 73, 73);
   border-radius: 0 0 25px;
 }
@@ -1022,7 +1048,7 @@ h2 {
 
 .header-image {
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
   height: 100px;
   display: flex;
   align-items: center;
@@ -1062,7 +1088,7 @@ li {
 }
 
 .active {
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: var(--text);
   padding: 5px 10px;
   border-radius: 5px;
@@ -1107,7 +1133,7 @@ li a {
   .mobile-nav {
     visibility: visible;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     position: fixed;
     bottom: 0;
     display: flex;
@@ -1139,7 +1165,7 @@ li a {
     width: 100%;
     height: 60px;
     position: fixed;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     visibility: visible;
     display: flex;
     align-items: center;
@@ -1186,7 +1212,7 @@ li a {
   }
 
   .user-profile {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     height: 3rem;
     width: 3rem;
     border-radius: 5px;
@@ -1207,6 +1233,7 @@ li a {
   /* landing page section */
   .landing-page {
     width: 100%;
+    padding: 0;
     margin: 0 auto;
 
     display: flex;
@@ -1419,7 +1446,7 @@ li a {
     width: 250px;
     height: 100%;
     display: flex;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--secondary);
     align-items: center;
     font-family: "Montserrat";
     background-size: cover;
@@ -1494,6 +1521,25 @@ li a {
   .product-title {
     font-size: large;
   }
+
+  /* CHAT SECTION */
+  .chat-section {
+    z-index: 1000;
+  }
+
+  .chat-box {
+    padding: 0;
+    width: 85%;
+    height: 100dvh;
+    transform: scale() translate(-85%, 10%);
+    top: 50%;
+    z-index: 1000;
+    position: fixed; /* Gunakan fixed agar tetap di layar */ /* Posisikan di tengah horizontal */
+  }
+  .chat-content-container {
+    max-height: 100%;
+    padding: 10px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1504,11 +1550,19 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
   }
 
   .chat-box {
-    transform: scale(0.6) translate(-85%, -87%);
+    width: 100%;
+    height: 100dvh;
+    transform: scale() translate(-85%, 10%);
+    top: 50%;
+    z-index: 1000;
     position: fixed; /* Gunakan fixed agar tetap di layar */ /* Posisikan di tengah horizontal */
+  }
+  .chat-content-container {
+    max-height: 100%;
   }
 
   .landing-page {

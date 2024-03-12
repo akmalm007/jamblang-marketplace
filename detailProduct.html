@@ -146,7 +146,7 @@
               >
               <button id="increment" class="button">+</button>
             </div>
-            <button class="beli">
+            <button class="beli" id="beli">
               Beli <i class="bx bxs-shopping-bags"></i>
             </button>
           </div>
@@ -262,164 +262,270 @@
         </div>
       </section>
 
-      <section class="rating-section">
-        <h1 class="review-title">Ulasan</h1>
-        <!-- ==================================== -->
-        <div class="user-rating-main-container">
-          <!-- =====USER REVIEW======= -->
-          <div class="user-review-container">
-            <h1 class="star-user">
-              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i>
-            </h1>
-
-            <p style="width: 100%">24 Frebruari 2024</p>
-
-            <div class="name-profile-container">
-              <div class="profile"></div>
-              <h2 class="name">Username</h2>
-            </div>
-
-            <div class="user-review">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                libero esse, praesentium neque ad explicabo nihil blanditiis
-                necessitatibus at labore impedit exercitationem hic a nulla
-                doloribus, voluptas iste, cupiditate nisi!
-              </p>
-            </div>
-            >
-          </div>
-          <div class="user-image-container">
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
+      <h1 class="review-title">Ulasan</h1>
+      <section class="rating-section" id="rating-section">
+        <a href="#" class="go-up"><i class="bx bx-up-arrow-alt icon"></i></a>
+        <!-- buttons -->
+        <div class="filter-container">
+          <div class="filter-button">
+            <button onclick="filterRating(1)">
+              1 <i class="bx bxs-star rating-icon"></i>
+            </button>
+            <button onclick="filterRating(2)">
+              2 <i class="bx bxs-star rating-icon"></i>
+            </button>
+            <button onclick="filterRating(3)">
+              3 <i class="bx bxs-star rating-icon"></i>
+            </button>
+            <button onclick="filterRating(4)">
+              4 <i class="bx bxs-star rating-icon"></i>
+            </button>
+            <button onclick="filterRating(5)">
+              5 <i class="bx bxs-star rating-icon"></i>
+            </button>
+            <button onclick="filterLowest()">Terendah</button>
+            <button onclick="filterHighest()">Tertinggi</button>
+            <button onclick="showAll()">Tampilkan Semua</button>
           </div>
         </div>
         <!-- ==================================== -->
-        <div class="user-rating-main-container">
-          <!-- =====USER REVIEW======= -->
-          <div class="user-review-container">
-            <h1 class="star-user">
-              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i>
-            </h1>
 
-            <p style="width: 100%">24 Frebruari 2024</p>
-            <div class="name-profile-container">
-              <div class="profile"></div>
-              <h2 class="name">Username</h2>
-            </div>
+        <div class="user-review-wrapper">
+          <div class="input-review">
+            <h1 style="margin-bottom: 10px; color: white">Ulasan anda</h1>
+            <form action="" class="input-container">
+              <textarea
+                name=""
+                class="user-input-field"
+                placeholder="Jelaskan Pengalamanmu dengan barang ini "
+              ></textarea>
+              <div class="image-upload">
+                <label for="file-input">
+                  <i class="bx bxs-image-alt icon"></i>
+                </label>
 
-            <div class="user-review">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                libero esse, praesentium neque ad explicabo nihil blanditiis
-                necessitatibus at labore impedit exercitationem hic a nulla
-                doloribus, voluptas iste, cupiditate nisi!
-              </p>
-            </div>
-            >
+                <input id="file-input" type="file" />
+              </div>
+              <input type="submit" class="submit-review" />
+            </form>
           </div>
-          <div class="user-image-container">
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <!-- ==================================== -->
-        <div class="user-rating-main-container">
-          <!-- =====USER REVIEW======= -->
-          <div class="user-review-container">
-            <h1 class="star-user">
-              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i>
-            </h1>
+          <!-- ==================================== -->
+          <h1
+            id="no-review-message"
+            style="display: none; color: var(--secondary); width: 100%"
+          >
+            Belum ada yang memberi rating.
+          </h1>
+          <div class="user-rating-main-container">
+            <!-- =====USER REVIEW======= -->
+            <div class="user-review-container">
+              <h1 class="star-user">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+              </h1>
 
-            <p style="width: 100%">24 Frebruari 2024</p>
-            <div class="name-profile-container">
-              <div class="profile"></div>
-              <h2 class="name">Username</h2>
-            </div>
+              <p style="width: 100%">24 Frebruari 2024</p>
+              <div class="name-profile-container">
+                <div class="profile"></div>
+                <h2 class="name">Username</h2>
+              </div>
 
-            <div class="user-review">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                libero esse, praesentium neque ad explicabo nihil blanditiis
-                necessitatibus at labore impedit exercitationem hic a nulla
-                doloribus, voluptas iste, cupiditate nisi!
-              </p>
+              <div class="user-review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  libero esse, praesentium neque ad explicabo nihil blanditiis
+                  necessitatibus at labore impedit exercitationem hic a nulla
+                  doloribus, voluptas iste, cupiditate nisi!
+                </p>
+              </div>
+              >
             </div>
-            >
-          </div>
-          <div class="user-image-container">
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
-            </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+            <div class="user-image-container">
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
-        <!-- ==================================== -->
-        <div class="user-rating-main-container">
-          <!-- =====USER REVIEW======= -->
-          <div class="user-review-container">
-            <h1 class="star-user">
-              <i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
-              ><i class="bx bxs-star"></i>
-            </h1>
+          <div class="user-rating-main-container">
+            <!-- =====USER REVIEW======= -->
+            <div class="user-review-container">
+              <h1 class="star-user">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </h1>
 
-            <p style="width: 100%">24 Frebruari 2024</p>
-            <div class="name-profile-container">
-              <div class="profile"></div>
-              <h2 class="name">Username</h2>
-            </div>
+              <p style="width: 100%">24 Frebruari 2024</p>
+              <div class="name-profile-container">
+                <div class="profile"></div>
+                <h2 class="name">Username</h2>
+              </div>
 
-            <div class="user-review">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                libero esse, praesentium neque ad explicabo nihil blanditiis
-                necessitatibus at labore impedit exercitationem hic a nulla
-                doloribus, voluptas iste, cupiditate nisi!
-              </p>
+              <div class="user-review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  libero esse, praesentium neque ad explicabo nihil blanditiis
+                  necessitatibus at labore impedit exercitationem hic a nulla
+                  doloribus, voluptas iste, cupiditate nisi!
+                </p>
+              </div>
+              >
             </div>
-            >
+            <div class="user-image-container">
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="user-image-container">
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+          <div class="user-rating-main-container">
+            <!-- =====USER REVIEW======= -->
+            <div class="user-review-container">
+              <h1 class="star-user">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </h1>
+
+              <p style="width: 100%">24 Frebruari 2024</p>
+              <div class="name-profile-container">
+                <div class="profile"></div>
+                <h2 class="name">Username</h2>
+              </div>
+
+              <div class="user-review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  libero esse, praesentium neque ad explicabo nihil blanditiis
+                  necessitatibus at labore impedit exercitationem hic a nulla
+                  doloribus, voluptas iste, cupiditate nisi!
+                </p>
+              </div>
+              >
             </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+            <div class="user-image-container">
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
             </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+          </div>
+          <div class="user-rating-main-container">
+            <!-- =====USER REVIEW======= -->
+            <div class="user-review-container">
+              <h1 class="star-user">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </h1>
+
+              <p style="width: 100%">24 Frebruari 2024</p>
+              <div class="name-profile-container">
+                <div class="profile"></div>
+                <h2 class="name">Username</h2>
+              </div>
+
+              <div class="user-review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  libero esse, praesentium neque ad explicabo nihil blanditiis
+                  necessitatibus at labore impedit exercitationem hic a nulla
+                  doloribus, voluptas iste, cupiditate nisi!
+                </p>
+              </div>
+              >
             </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+            <div class="user-image-container">
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
             </div>
-            <div class="user-image">
-              <img src="image/review-image.jpg" alt="" />
+          </div>
+          <div class="user-rating-main-container">
+            <!-- =====USER REVIEW======= -->
+            <div class="user-review-container">
+              <h1 class="star-user">
+                <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                ><i class="bx bxs-star"></i>
+              </h1>
+
+              <p style="width: 100%">24 Frebruari 2024</p>
+              <div class="name-profile-container">
+                <div class="profile"></div>
+                <h2 class="name">Username</h2>
+              </div>
+
+              <div class="user-review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  libero esse, praesentium neque ad explicabo nihil blanditiis
+                  necessitatibus at labore impedit exercitationem hic a nulla
+                  doloribus, voluptas iste, cupiditate nisi!
+                </p>
+              </div>
+              >
+            </div>
+            <div class="user-image-container">
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
+              <div class="user-image">
+                <img src="image/review-image.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -511,6 +617,117 @@
     <div class="message user">Tentu! Bagaimana cara memesan?</div>
     <div class="message admin">Anda dapat melihat daftar produk kami di halaman toko.</div>
   `;
+      });
+      const sendTextButton = document.getElementById("sendText");
+      const messageInput = document.querySelector(".input-area input");
+
+      sendTextButton.addEventListener("click", () => {
+        const userMessage = messageInput.value.trim();
+
+        if (userMessage !== "") {
+          appendMessage("user", userMessage);
+          messageInput.value = "";
+          setTimeout(() => {
+            appendMessage(
+              "admin",
+              "Terima kasih atas pertanyaannya! Tim kami akan segera menghubungi Anda."
+            );
+          }, 1000);
+        }
+      });
+
+      messageInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault(); // Prevent the default behavior of Enter (e.g., new line)
+          sendMessage();
+        }
+      });
+
+      function appendMessage(sender, message) {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message", sender);
+        messageElement.textContent = message;
+        chatContent.appendChild(messageElement);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviews = document.querySelectorAll(
+          ".user-rating-main-container"
+        );
+        const noReviewMessage = document.getElementById("no-review-message");
+
+        function filterRating(star) {
+          let hasReviews = false;
+
+          reviews.forEach((review) => {
+            const userRating =
+              review.querySelector(".star-user").children.length;
+
+            if (userRating === star) {
+              review.style.display = "";
+              hasReviews = true;
+            } else {
+              review.style.display = "none";
+            }
+          });
+
+          if (!hasReviews) {
+            noReviewMessage.style.display = "block";
+          } else {
+            noReviewMessage.style.display = "none";
+          }
+        }
+
+        function sortReviewsByRating(order) {
+          reviews.forEach((review) => {
+            review.style.display = "";
+          });
+
+          reviews.sort((a, b) => {
+            const ratingA = a.querySelector(".star-user").children.length;
+            const ratingB = b.querySelector(".star-user").children.length;
+
+            return order === "asc" ? ratingA - ratingB : ratingB - ratingA;
+          });
+
+          reviews.forEach((review) => {
+            document.querySelector(".user-review-wrapper").appendChild(review);
+          });
+        }
+
+        function filterLowest() {
+          sortReviewsByRating("asc");
+        }
+
+        function filterHighest() {
+          sortReviewsByRating("desc");
+        }
+
+        function showAll() {
+          reviews.forEach((review) => {
+            review.style.display = "";
+          });
+
+          noReviewMessage.style.display = "none";
+        }
+
+        // Attach event listeners to your filter buttons
+        document.querySelectorAll(".filter-button button").forEach((button) => {
+          button.addEventListener("click", function () {
+            const star = parseInt(this.textContent.trim());
+            filterRating(star);
+          });
+        });
+
+        document
+          .querySelector('.filter-button button[onclick="filterLowest()"]')
+          .addEventListener("click", filterLowest);
+        document
+          .querySelector('.filter-button button[onclick="filterHighest()"]')
+          .addEventListener("click", filterHighest);
+        document
+          .querySelector('.filter-button button[onclick="showAll()"]')
+          .addEventListener("click", showAll);
       });
     </script>
   </body>
