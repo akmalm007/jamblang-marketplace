@@ -44,7 +44,7 @@
 
 :root {
   --green: rgb(101, 167, 147);
-  --primary: rgb(118, 221, 164);
+  --primary: #76dda4;
   --secondary: rgb(75, 117, 96);
   --accent: #9cceaf;
   --background: #f5f5f5;
