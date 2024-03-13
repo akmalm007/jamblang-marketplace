@@ -317,7 +317,7 @@ h2 {
   top: 0;
   padding-left: 2rem;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .keranjang {
     font-size: x-large;
     width: 40px;
