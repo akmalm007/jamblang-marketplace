@@ -107,24 +107,24 @@
               />
             </div>
             <div class="photo-collection">
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
-              <a href="" class="other-photo"
-                ><img src="image/other-photo-product.jpg" alt="other-photo"
-              /></a>
+              <button class="other-photo">
+                <img src="image/other-photo-product.jpg" alt="other-photo" />
+              </button>
+              <button class="other-photo">
+                <img src="image/bella_palm1.jpeg" alt="other-photo" />
+              </button>
+              <button class="other-photo">
+                <img src="image/bella_palm2.jpg" alt="other-photo" />
+              </button>
+              <button class="other-photo">
+                <img src="image/bella_palm3.jpg" alt="other-photo" />
+              </button>
+              <button class="other-photo">
+                <img src="image/other-photo-product.jpg" alt="other-photo" />
+              </button>
+              <button class="other-photo">
+                <img src="image/other-photo-product.jpg" alt="other-photo" />
+              </button>
             </div>
           </div>
           <div class="icon-container">
@@ -728,6 +728,20 @@
         document
           .querySelector('.filter-button button[onclick="showAll()"]')
           .addEventListener("click", showAll);
+      });
+
+      //switch photo
+      const otherPhotos = document.querySelectorAll(".other-photo");
+      const displayPhoto = document.querySelector(".display-photo");
+
+      otherPhotos.forEach((otherPhoto) => {
+        otherPhoto.addEventListener("click", () => {
+          const newSrc = otherPhoto.querySelector("img").getAttribute("src");
+          const currentSrc = displayPhoto.getAttribute("src");
+
+          displayPhoto.setAttribute("src", newSrc);
+          otherPhoto.querySelector("img").setAttribute("src", currentSrc);
+        });
       });
     </script>
   </body>
